@@ -1,0 +1,2585 @@
+**********************
+PowerShell transcript start
+Start time: 20241119215633
+Username: MacBook-Air-Mac\mac
+RunAs User: MacBook-Air-Mac\mac
+Configuration Name: 
+Machine: MacBook-Air-Mac (Unix 14.6.1)
+Host Application: /opt/homebrew/Cellar/powershell/7.4.5/libexec/pwsh.dll
+Process ID: 90426
+PSVersion: 7.4.5
+PSEdition: Core
+GitCommitId: 7.4.5
+OS: Darwin 23.6.0 Darwin Kernel Version 23.6.0: Mon Jul 29 21:16:46 PDT 2024; root:xnu-10063.141.2~1/RELEASE_ARM64_T8112
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is lol.txt
+PS /Users/mac/untitled8> New-Item -Type directory -Name "Mo01_Doronin"
+
+    Directory: /Users/mac/untitled8
+
+UnixMode         User Group         LastWriteTime         Size Name
+--------         ---- -----         -------------         ---- ----
+drwxr-xr-x        mac staff      19.11.2024 21:57           64 Mo01_Doronin
+
+PS /Users/mac/untitled8> cd Mo01_Doronin
+PS /Users/mac/untitled8/Mo01_Doronin> dir ~
+
+    Directory: /Users/mac
+
+UnixMode         User Group         LastWriteTime         Size Name
+--------         ---- -----         -------------         ---- ----
+drwxr-xr-x        mac staff      11.11.2024 11:21          160 6.7.2
+drwxr-xr-x        mac staff      04.11.2024 18:10          288 blendcolors
+drwxr-xr-x        mac staff      30.10.2024 11:00           64 build
+drwxr-xr-x        mac staff      17.11.2024 12:40          384 colortests
+drwx------        mac staff      15.11.2024 00:46          960 Desktop
+drwx------        mac staff      13.11.2024 14:53          192 Documents
+drwx------        mac staff      19.11.2024 21:54         2240 Downloads
+drwxr-xr-x        mac staff      07.10.2024 21:44          128 MO01_Doronin
+drwxr-xr-x        mac staff      29.10.2024 02:45           64 Mo01_Doroninn
+drwxr-xr-x        mac staff      29.10.2024 03:16           96 Mo01_DOROOO
+drwx------        mac staff      06.10.2024 06:47          128 Movies
+drwx------        mac staff      13.10.2024 23:44          192 Music
+drwx------        mac staff      13.10.2024 09:40          160 Pictures
+drwxr-xr-x        mac staff      18.11.2024 09:06          320 player_qml
+drwxr-xr-x        mac staff      07.10.2024 21:55          160 PowerShell
+drwxr-xr-x        mac staff      04.10.2024 16:49          128 Public
+drwxr-xr-x        mac staff      17.11.2024 12:40          800 QMLPLAYER
+drwxr-xr-x        mac staff      17.11.2024 12:40          288 QMLPLAYERNEW
+drwxr-xr-x        mac staff      18.11.2024 09:05          352 QMLTESTS
+drwxr-xr-x        mac staff      27.09.2024 06:08           96 Qt Creator.app
+drwxr-xr-x        mac staff      01.11.2024 15:08          512 sd
+drwxr-xr-x        mac staff      10.11.2024 17:34          224 test
+drwxr-xr-x        mac staff      04.11.2024 18:10          288 untitled
+drwxr-xr-x        mac staff      09.11.2024 13:48          192 untitled1
+drwxr-xr-x        mac staff      11.11.2024 21:32          288 untitled2
+drwxr-xr-x        mac staff      11.11.2024 21:30          224 untitled3
+drwxr-xr-x        mac staff      11.11.2024 21:36          288 untitled4
+drwxr-xr-x        mac staff      13.11.2024 14:00          448 untitled5
+drwxr-xr-x        mac staff      18.11.2024 09:06          224 untitled6
+drwxr-xr-x        mac staff      17.11.2024 13:44          224 untitled7
+drwxr-xr-x        mac staff      19.11.2024 21:57          384 untitled8
+-rw-r--r--        mac staff      11.11.2024 12:39        85919 aqtinstall.log
+-rw-r--r--        mac staff      06.11.2024 14:50          587 as
+-rw-r--r--        mac staff      07.10.2024 21:56         9289 DoroninMaksimWor
+                                                               k.txt
+-rw-r--r--        mac staff      29.10.2024 03:25        84666 DoroninMaksimWor
+                                                               k2.txt
+-rw-r--r--        mac staff      07.10.2024 21:29         1935 heh.txt
+-rw-r--r--        mac staff      17.11.2024 12:17         1236 Main.qml
+-rw-r--r--        mac staff      17.10.2024 20:26          150 README.md
+-rw-r--r--        mac staff      29.10.2024 23:45      4466167 Yeat-ILUV-(JustN
+                                                               aija.com).mp3
+
+PS /Users/mac/untitled8/Mo01_Doronin> #Задание 3.5
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Show-Files {
+    param (
+        [int]$Count
+    )
+
+    if (-not $Count) {
+        Write-Host "Пожалуйста, укажите количество выводимых файлов." -ForegroundColor White -BackgroundColor Red
+        return
+    }
+
+    $files = Get-ChildItem
+
+    # Проверяем, есть ли файлы в каталоге
+    if ($files.Count -eq 0) {
+        Write-Host "В текущем каталоге отсутствуют файлы." -ForegroundColor White -BackgroundColor Red
+    } else {
+        $filesToShow = $files | Select-Object -First $Count
+        Write-Host "Список файлов в текущем каталоге:" -ForegroundColor Black -BackgroundColor Yellow
+        $filesToShow | ForEach-Object { Write-Host $_.Name }
+    }
+}
+PS /Users/mac/untitled8/Mo01_Doronin> Show-Files -Count 5
+В текущем каталоге отсутствуют файлы.
+PS /Users/mac/untitled8/Mo01_Doronin> # Здание 3.5п:
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Show-FileDirInfo {
+    [CmdletBinding()]
+    param (
+        [switch]$File,
+        [switch]$Dir
+    )
+
+    if ($File -and $Dir) {
+        Write-Host "Пожалуйста, выберите только один переключатель: -File или -Dir." -ForegroundColor White -BackgroundColor Red
+        return
+    }
+
+    if ($File) {
+        # Получаем список файлов в текущем каталоге
+        $files = Get-ChildItem -File
+
+        # Выводим количество файлов и их суммарную длину
+        $fileCount = $files.Count
+        $totalSize = ($files | Measure-Object -Property Length -Sum).Sum
+
+        Write-Host "Количество файлов: $fileCount" -ForegroundColor Black -BackgroundColor Yellow
+        Write-Host "Суммарная длина файлов: $totalSize байт" -ForegroundColor Black -BackgroundColor Yellow
+    }
+
+    if ($Dir) {
+        # Получаем сп�������� ������������������ �� �������������� ����������������
+        $dirs = Get-ChildItem -Directory
+
+        # �������������� �������������������� ������������������
+        $dirCount = $dirs.Count
+
+        Write-Host "�������������������� ������������������: $dirCount" -ForegroundColor White -BackgroundColor Red
+    }
+
+    if (-not $File -and -not $Dir) {
+        Write-Host "��������������������, �������������� �������� ���� �������� ��������������������������: -File ������ -Dir." -ForegroundColor White -BackgroundColor Red
+    }
+}
+PS /Users/mac/untitled8/Mo01_Doronin> PS C:\Users\NOVASTORE> Show-FileDirInfo -File
+/bin/ps: illegal option -- :
+/bin/ps: illegal option -- :
+usage: ps [-AaCcEefhjlMmrSTvwXx] [-O fmt | -o fmt] [-G gid[,gid...]]
+usage: ps [-AaCcEefhjlMmrSTvwXx] [-O fmt | -o fmt] [-G gid[,gid...]]
+          [-u]
+          [-u]
+          [-p pid[,pid...]] [-t tty[,tty...]] [-U user[,user...]]
+          [-p pid[,pid...]] [-t tty[,tty...]] [-U user[,user...]]
+       ps [-L]
+       ps [-L]
+PS /Users/mac/untitled8/Mo01_Doronin> Show-FileDirInfo -File
+Количество файлов: 0
+Суммарная длина файлов:  байт
+PS /Users/mac/untitled8/Mo01_Doronin> # Здание 3.10:
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Get-TotalCpuTime {
+    param (
+        [string]$DriveLetter
+    )
+
+    if (-not $DriveLetter) {
+        $DriveLetter = Read-Host "Введите букву диска (например, C)"
+    }
+
+    if ($DriveLetter.Length -ne 1 -or $DriveLetter -notmatch '^[A-Z]$') {
+        Write-Host "Ошибка: Введите корректную букву диска (например, C)." -ForegroundColor White -BackgroundColor Red
+        return
+    }
+
+    $totalCpuTime = (Get-Process | Where-Object { $_.Path -like "$DriveLetter*"} | Measure-Object -Property CPU -Sum).Sum
+
+    # Выводим результат
+    if ($totalCpuTime -eq $null) {
+        $totalCpuTime = 0
+    }
+
+    Write-Host "Общее процессорное время всех процессов на диске ${DriveLetter}: ${totalCpuTime} секунд" -ForegroundColor Black -BackgroundColor Yellow
+}
+PS /Users/mac/untitled8/Mo01_Doronin> Get-TotalCpuTime -DriveLetter "C"
+Общее процессорное время всех процессов на диске C: 0 секунд
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Get-DirectoryFileInfo {
+    param (
+        [string]$DirectoryPath
+    )
+
+    if (-not $DirectoryPath) {
+        $DirectoryPath = Read-Host "Введите путь к директории"
+    }
+
+    if (-not (Test-Path -Path $DirectoryPath)) {
+        Write-Host "Ошибка: Отсутствует директория." -ForegroundColor White -BackgroundColor Red
+        return
+    }
+
+    $files = Get-ChildItem -Path $DirectoryPath -File
+
+    if ($files.Count -eq 0) {
+        Write-Host "Ошибка: В директории нет файлов." -ForegroundColor Red -BackgroundColor Yellow
+        return
+    }
+
+    $fileCount = $files.Count
+    $totalSizeKB = [math]::Round(($files | Measure-Object -Property Length -Sum).Sum / 1KB, 2)
+
+    Write-Host "В директории $fileCount файлов суммарным размером $totalSizeKB килобайт." -ForegroundColor Black -BackgroundColor Green
+}
+PS /Users/mac/untitled8/Mo01_Doronin>  Get-DirectoryFileInfo -DirectoryPath "D:\Coding\vue\emphy"
+Ошибка: Отсутствует директория.
+PS /Users/mac/untitled8/Mo01_Doronin>  Get-DirectoryFileInfo -DirectoryPath "/Users/mac"
+В директории 8 файлов суммарным размером 4540.97 килобайт.
+PS /Users/mac/untitled8/Mo01_Doronin> # Задание 3.14
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Get-MemoryForProcesses {
+    param (
+        [int]$N
+    )
+
+    if (-not $N) {
+        $N = Read-Host "Введите количество процессов (N)"
+        
+        if (-not [int]::TryParse($N, [ref]$N) -or $N -le 0) {
+            Write-Host "Ошибка: Введите положительное целое число." -ForegroundColor Red
+            return
+        }
+    }
+
+    $memoryPerProcessMB = 50
+    $totalMemoryKB = $N * $memoryPerProcessMB * 1024 
+
+    Write-Host "$N процессов требует памяти $totalMemoryKB килобайт." -ForegroundColor Black -BackgroundColor Green
+}
+PS /Users/mac/untitled8/Mo01_Doronin> Get-MemoryForProcesses -N 10
+10 процессов требует памяти 512000 килобайт.
+PS /Users/mac/untitled8/Mo01_Doronin> # Задание 3.15
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Get-LargeFiles {
+    param (
+        [string]$DirectoryPath
+    )
+
+    if (-not $DirectoryPath) {
+        $DirectoryPath = Read-Host "Введите путь к директории"
+    }
+
+    if (-not (Test-Path -Path $DirectoryPath -PathType Container)) {
+        Write-Host "Ошибка: Директория '$DirectoryPath' не существует." -ForegroundColor Red
+        return
+    }
+
+    $files = Get-ChildItem -Path $DirectoryPath -File | Where-Object { $_.Length -gt 1000 }
+
+    $VR = [PSCustomObject]@{
+        Count = $files.Count
+        Files = $files | Sort-Object Length -Descending
+    }
+
+    Write-Host "Количество файлов более 1000 байт: $($VR.Count)"
+    Write-Host "Список файлов (упорядоченный по убыванию длины):"
+    $VR.Files | ForEach-Object { Write-Host "$($_.Name) - $($_.Length) байт" }
+}
+PS /Users/mac/untitled8/Mo01_Doronin>  Get-LargeFiles -DirectoryPath "/Users/mac"
+Количество файлов более 1000 байт: 6
+Список файлов (упорядоченный по убыванию длины):
+Yeat-ILUV-(JustNaija.com).mp3 - 4466167 байт
+aqtinstall.log - 85919 байт
+DoroninMaksimWork2.txt - 84666 байт
+DoroninMaksimWork.txt - 9289 байт
+heh.txt - 1935 байт
+Main.qml - 1236 байт
+PS /Users/mac/untitled8/Mo01_Doronin> # Задание 3.16
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Get-ProcessesByDriveLetter {
+    param (
+        [string]$DriveLetter
+    )
+
+    if (-not $DriveLetter) {
+        $DriveLetter = Read-Host "Введите букву диска (например, C)"
+    }
+
+    if ($DriveLetter.Length -ne 1 -or $DriveLetter -notmatch '^[A-Za-z]$') {
+        Write-Host "Ошибка: Укажите корректную букву диска." -ForegroundColor Red
+        return
+    }
+
+    $processes = Get-Process | Where-Object { $_.Path -like "${DriveLetter}:\*" }
+
+    $processCount = $processes.Count
+
+    $sortedProcesses = $processes | Sort-Object CPU -Descending
+
+    $surname = "Фамилия"  # Замените на вашу фамилию
+    $groupNumber = "№группы"  # Замените на номер вашей группы
+    $directoryPath = "$groupNumber`_$surname"
+
+    if (-not (Test-Path -Path $directoryPath)) {
+        New-Item -ItemType Directory -Path $directoryPath | Out-Null
+    }
+
+    $fileName = "f_$surname.txt"
+    $filePath = Join-Path -Path $directoryPath -ChildPath $fileName
+
+    $output = @()
+    $output += "�������������������� ������������������ ���� ���������� ${DriveLetter}: $processCount"
+    $output += "������������ ������������������ (�������������������������� ���� CPU):"
+    
+    foreach ($proc in $sortedProcesses) {
+        $output += "$($proc.Name) - CPU: $($proc.CPU)"
+    }
+
+    Set-Content -Path $filePath -Value $output
+
+    Write-Host "�������������������� ���������� '$fileName':"
+    Get-Content -Path $filePath | ForEach-Object { Write-Host $_ }
+}
+PS /Users/mac/untitled8/Mo01_Doronin> Get-ProcessesByDriveLetter
+�������������������� ���������� 'f_Фамилия.txt':
+�������������������� ������������������ ���� ���������� C: 0
+������������ ������������������ (�������������������������� ���� CPU):
+PS /Users/mac/untitled8/Mo01_Doronin> # Задание 3.18
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Get-DirectoryContents {
+    param (
+        [string]$FileName
+    )
+
+    if (-not $FileName) {
+        $FileName = Read-Host -Prompt "Введите имя файла"
+    }
+
+    $drives = Get-PSDrive -PSProvider FileSystem
+    Write-Host "Список доступных дисков:"
+    $drives | ForEach-Object { Write-Host $_.Name }
+
+    $driveLetter = Read-Host -Prompt "Введите букву диска (например, C)"
+
+    if ($drives.Name -notcontains $driveLetter) {
+        Write-Host "Диск $driveLetter не найден. Завершение работы функции."
+        return
+    }
+
+    $groupFolder = "№группы_Фамилия"
+    $filePath = Join-Path -Path $groupFolder -ChildPath $FileName
+
+    if (-not (Test-Path $groupFolder)) {
+        New-Item -ItemType Directory -Path $groupFolder | Out-Null
+    }
+
+    $rootContents = Get-ChildItem -Path "${driveLetter}:\\" | Out-String
+
+    Set-Content -Path $filePath -Value $rootContents
+
+    Add-Content -Path $filePath -Value "������������ ������������:`n$($drives | Out-String)"
+
+    Write-Host "�������������������� ���������� ${filePath}:"
+    Get-Content -Path $filePath | ForEach-Object { Write-Host $_ }
+}
+PS /Users/mac/untitled8/Mo01_Doronin> Get-DirectoryContents
+Список доступных дисков:
+/
+Temp
+Диск C не найден. Завершение работы функции.
+PS /Users/mac/untitled8/Mo01_Doronin> # Задание 3.19
+PS /Users/mac/untitled8/Mo01_Doronin> Функция:
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Функция:: The term 'Функция:' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> function Get-DirectoryInfo {
+    param (
+        [string]$OutFile,
+        [string]$Directory = (Get-Location)
+    )
+
+    if (-not $OutFile) {
+        $OutFile = Read-Host -Prompt "Введите имя результативного файла"
+    }
+
+    if (Test-Path $Directory) {
+        Set-Location -Path $Directory
+    } else {
+        Write-Host "Указанная директория не найдена. Завершение работы функции."
+        return
+    }
+
+    Write-Host "Содержимое директории ${Directory}:"
+    Get-ChildItem | ForEach-Object { Write-Host $_.FullName }
+
+    $groupFolder = "№группы_Фамилия"
+
+    if (-not (Test-Path $groupFolder)) {
+        New-Item -ItemType Directory -Path $groupFolder | Out-Null
+    }
+
+    $subdirectories = Get-ChildItem -Directory
+    $files = Get-ChildItem -File
+
+    $outputPath = Join-Path -Path $groupFolder -ChildPath $OutFile
+
+    "Список подкаталого��:" | Out-File -FilePath $outputPath
+    $subdirectories | ForEach-Object { $_.FullName } | Out-File -Append -FilePath $outputPath
+
+    "������������ ������������:" | Out-File -Append -FilePath $outputPath
+    $files | ForEach-Object { $_.FullName } | Out-File -Append -FilePath $outputPath
+
+    if ($files.Count -gt 0) {
+        $sizeStats = $files | Measure-Object -Property Length -Sum -Minimum -Maximum
+
+        "�������������������� ������������: $($sizeStats.Count)" | Out-File -Append -FilePath $outputPath
+        "������������������ ������������ ������������: $($sizeStats.Sum) ��������" | Out-File -Append -FilePath $outputPath
+        "���������������������� ������������ ����������: $($sizeStats.Minimum) ��������" | Out-File -Append -FilePath $outputPath
+        "������������������������ ������������ ����������: $($sizeStats.Maximum) ��������" | Out-File -Append -FilePath $outputPath
+    } else {
+        "������ ������������ �� ��������������������." | Out-File -Append -FilePath $outputPath
+    }
+
+    Write-Host "�������������������� ���������� ${outputPath}:"
+    Get-Content -Path $outputPath | ForEach-Object { Write-Host $_ }
+}
+PS /Users/mac/untitled8/Mo01_Doronin> Get-DirectoryInfo
+Содержимое директории /Users/mac/untitled8/Mo01_Doronin:
+/Users/mac/untitled8/Mo01_Doronin/№группы_Фамилия
+�������������������� ���������� №группы_Фамилия/lol:
+Список подкаталого��:
+/Users/mac/untitled8/Mo01_Doronin/№группы_Фамилия
+������������ ������������:
+������ ������������ �� ��������������������.
+PS /Users/mac/untitled8/Mo01_Doronin> Get-Process
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      0     0,00       0,00       0,00       0 …32
+      0     0,00       0,00       0,00       1   1
+      0     0,00       0,00       0,00      83  83
+      0     0,00       0,00       0,00      85  85
+      0     0,00       0,00       0,00      87  87
+      0     0,00       0,00       0,00      88  88
+      0     0,00       0,00       0,00      89  89
+      0     0,00       0,00       0,00      92  92
+      0     0,00       0,00       0,00      95  95
+      0     0,00       0,00       0,00      97  97
+      0     0,00       0,00       0,00      98  98
+      0     0,00       0,00       0,00     103 103
+      0     0,00       0,00       0,00     108 108
+      0     0,00       0,00       0,00     112 112
+      0     0,00       0,00       0,00     114 114
+      0     0,00       0,00       0,00     115 115
+      0     0,00       0,00       0,00     119 119
+      0     0,00       0,00       0,00     122 122
+      0     0,00       0,00       0,00     123 123
+      0     0,00       0,00       0,00     124 124
+      0     0,00       0,00       0,00     125 125
+      0     0,00       0,00       0,00     126 126
+      0     0,00       0,00       0,00     127 127
+      0     0,00       0,00       0,00     128 128
+      0     0,00       0,00       0,00     130 130
+      0     0,00       0,00       0,00     132 132
+      0     0,00       0,00       0,00     133 133
+      0     0,00       0,00       0,00     135 135
+      0     0,00       0,00       0,00     139 139
+      0     0,00       0,00       0,00     140 140
+      0     0,00       0,00       0,00     141 141
+      0     0,00       0,00       0,00     145 145
+      0     0,00       0,00       0,00     147 147
+      0     0,00       0,00       0,00     148 148
+      0     0,00       0,00       0,00     149 149
+      0     0,00       0,00       0,00     150 150
+      0     0,00       0,00       0,00     151 151
+      0     0,00       0,00       0,00     152 152
+      0     0,00       0,00       0,00     155 155
+      0     0,00       0,00       0,00     156 156
+      0     0,00       0,00       0,00     157 157
+      0     0,00       0,00       0,00     158 158
+      0     0,00       0,00       0,00     159 159
+      0     0,00       0,00       0,00     184 184
+      0     0,00       0,00       0,00     185 185
+      0     0,00       0,00       0,00     196 196
+      0     0,00       0,00       0,00     197 197
+      0     0,00       0,00       0,00     200 200
+      0     0,00       0,00       0,00     203   1
+      0     0,00       0,00       0,00     213 213
+      0     0,00       0,00       0,00     215   1
+      0     0,00       0,00       0,00     221   1
+      0     0,00       0,00       0,00     245 245
+      0     0,00       0,00       0,00     251 251
+      0     0,00       0,00       0,00     252 252
+      0     0,00       0,00       0,00     253 253
+      0     0,00       0,00       0,00     255 255
+      0     0,00       0,00       0,00     258 258
+      0     0,00       0,00       0,00     260 260
+      0     0,00       0,00       0,00     264 264
+      0     0,00       0,00       0,00     267   1
+      0     0,00       0,00       0,00     269 269
+      0     0,00       0,00       0,00     271 271
+      0     0,00       0,00       0,00     273 273
+      0     0,00       0,00       0,00     274 274
+      0     0,00       0,00       0,00     276 276
+      0     0,00       0,00       0,00     288   1
+      0     0,00       0,00       0,00     329 329
+      0     0,00       0,00       0,00     334 334
+      0     0,00       0,00       0,00     336 336
+      0     0,00       0,00       0,00     337 337
+      0     0,00       0,00       0,00     338 338
+      0     0,00       0,00       0,00     340 340
+      0     0,00       0,00       0,00     343   1
+      0     0,00       0,00       0,00     344 344
+      0     0,00       0,00       0,00     345   1
+      0     0,00       0,00       0,00     349 349
+      0     0,00       0,00       0,00     353   1
+      0     0,00       0,00       0,00     365 365
+      0     0,00       0,00       0,00     369   1
+      0     0,00       0,00       0,00     378 378
+      0     0,00       0,00       0,00     379  92
+      0     0,00       0,00       0,00     418   1
+      0     0,00       0,00       0,00     443 443
+      0     0,00       0,00       0,00     451   1
+      0     0,00       0,00       0,00     554   1
+      0     0,00       0,00       0,00     558 558
+      0     0,00       0,00       0,00     586 586
+      0     0,00       0,00       0,00     590 590
+      0     0,00       0,00       0,00     601 601
+      0     0,00       0,00       0,00     621 621
+      0     0,00       0,00       0,00     627 627
+      0     0,00       0,00       0,00     698 698
+      0     0,00       0,00       0,00     717 717
+      0     0,00       0,00       0,00     754   1
+      0     0,00       0,00       0,00     765   1
+      0     0,00       0,00       0,00     785 785
+      0     0,00       0,00       0,00     826   1
+      0     0,00       0,00       0,00    1096 …96
+      0     0,00       0,00       0,00    1098 …98
+      0     0,00       0,00       0,00    1107 …07
+      0     0,00       0,00       0,00    1128 …28
+      0     0,00       0,00       0,00    1147 …47
+      0     0,00       0,00       0,00    1304 …04
+      0     0,00       0,00       0,00    1313   1
+      0     0,00       0,00       0,00   29507   1
+      0     0,00       0,00       0,00   29520 …20
+      0     0,00       0,00       0,00   30924 …24
+      0     0,00       0,00       0,01   32176   0
+      0     0,00       0,00       0,00   52415 …15
+      0     0,00       0,00       0,00   52535   1
+      0     0,00       0,00       0,00   53746 …46
+      0     0,00       0,00       0,00   53789 …89
+      0     0,00       0,00       0,00   61732 …32
+      0     0,00       0,00       0,00   74040 …40
+      0     0,00       0,00       0,00   75473 …73
+      0     0,00       0,00       0,00   77145 …45
+      0     0,00       0,00       0,00   77167 …67
+      0     0,00       0,00       0,00   77546 …46
+      0     0,00       0,00       0,00   79125 …25
+      0     0,00       0,00       0,00   79127 …27
+      0     0,00       0,00       0,00   79141 …41
+      0     0,00       0,00       0,00   79154 …54
+      0     0,00       0,00       0,00   79185 …85
+      0     0,00       0,00       0,00   79300 …00
+      0     0,00       0,00       0,00   79423 …23
+      0     0,00       0,00       0,00   85979   1
+      0     0,00       0,00       0,00   89822 …22
+      0     0,00       0,00       0,00   90066 …66
+      0     0,00       0,00       0,00   90077 …77
+      0     0,00       0,00       0,00   90078 …78
+      0     0,00       0,00       0,00   90083   1
+      0     0,00       0,00       0,00   90084   1
+      0     0,00       0,00       0,00   90085   1
+      0     0,00       0,00       0,00   90086   1
+      0     0,00       0,00       0,00   90087   1
+      0     0,00       0,00       0,00   90088   1
+      0     0,00       0,00       0,00   90089   1
+      0     0,00       0,00       0,00   90090   1
+      0     0,00       0,00       0,00   90091 …91
+      0     0,00       0,00       0,00   90092   1
+      0     0,00       0,00       0,00   90093   1
+      0     0,00       0,00       0,00   90094 …94
+      0     0,00       0,00       0,00   90102 …02
+      0     0,00       0,00       0,00   90119 …19
+      0     0,00       0,00       0,00   90123 …23
+      0     0,00       0,00       0,00   90124 …24
+      0     0,00       0,00       0,00   90125 …25
+      0     0,00       0,00       0,00   90127 …27
+      0     0,00       0,00       0,00   90130 …30
+      0     0,00       0,00       0,00   90201 …01
+      0     0,00       0,00       0,00   90220 …20
+      0     0,00       0,00       0,00   90227 …27
+      0     0,00       0,00       0,00   90228 …28
+      0     0,00       0,00       0,00   90229 …29
+      0     0,00       0,00       0,00   90231 …31
+      0     0,00       0,00       0,00   90255 …55
+      0     0,00       0,00       0,00   90257 …57
+      0     0,00       0,00       0,00   90273 …73
+      0     0,00       0,00       0,00   90275 …75
+      0     0,00       0,00       0,00   90277 …77
+      0     0,00       0,00       0,00   90282 …82
+      0     0,00       0,00       0,00   90289 …89
+      0     0,00       0,00       0,00   90291 …91
+      0     0,00       0,00       0,00   90306 …06
+      0     0,00       0,00       0,00   90324 …24
+      0     0,00       0,00       0,00   90331 …31
+      0     0,00       0,00       0,00   90332 …32
+      0     0,00       0,00       0,00   90362 …62
+      0     0,00       0,00       0,00   90367 …67
+      0     0,00       0,00       0,00   90429 …29
+      0     0,00       0,00       0,00   90430 …30
+      0     0,00       0,00       0,00   90431 …31
+      0     0,00       0,00       0,00   90470 …70
+      0     0,00       0,00       0,00   90473   1
+      0     0,00      14,39       0,38   89994   1 AccessibilityVi
+      0     0,00       9,62      14,89     552   1 accountsd
+      0     0,00      12,34       0,16   90314   1 adprivacyd
+      0     0,00       2,98       3,12     741   1 AirPlayUIAgent
+      0     0,00       9,64       0,22   90120   1 akd
+      0     0,00       5,98      39,03     603   1 AMPDeviceDiscov
+      0     0,00       8,64      13,06    1120   1 AMPLibraryAgent
+      0     0,00      13,66       0,32   90252   1 amsaccountsd
+      0     0,00      14,92       0,26   90253   1 amsengagementd
+      0     0,00      22,52       0,09   90393 …93 Appearance
+      0     0,00      29,72       0,24   90392 …92 AppleIDSettings
+      0     0,00     133,38       6,25   79249   1 AppleSpell
+      0     0,00      12,22       0,60   84788   1 AppSSOAgent
+      0     0,00       9,30      24,80   52411   1 appstoreagent
+      0     0,00       5,98       0,07   90129   1 AssetCacheLocat
+      0     0,00       8,56       2,57   77399   1 assistantd
+      0     0,00       9,75       3,07   77143   1 audioaccessoryd
+      0     0,00       8,25       0,13   90134   1 AudioComponentR
+      0     0,00       2,64      53,41     708   1 avconferenced
+      0     0,00      11,69       2,49   90133   1 axassetsd
+      0     0,00      26,84       0,07   90475   1 AXVisualSupport
+      0     0,00       9,22       0,49   79701   1 BackgroundTaskM
+      0     0,00      12,30      40,84   77183   1 BiomeAgent
+      0     0,00       4,28       4,99     596   1 bird
+      0     0,00       8,00       2,54   76982   1 bluetoothuserd
+      0     0,00       7,17       0,06   90099   1 businessservice
+      0     0,00      17,16       0,39   90293   1 calaccessd
+      0     0,00       8,95       0,16   79118 …18 CalendarWidgetE
+      0     0,00      16,17       1,11   87726   1 callservicesd
+      0     0,00       0,19       1,50   90135 …35 CarbonComponent
+      0     0,00       4,41       0,01   90106 …06 CategoriesServi
+      0     0,00      10,83       0,39   90107 …07 CategoriesServi
+      0     0,00       4,41       0,02   90108 …08 CategoriesServi
+      0     0,00       9,05       0,11   90109 …09 CategoriesServi
+      0     0,00       9,17       0,42   90110 …10 CategoriesServi
+      0     0,00       4,50       0,05   90116 …16 CategoriesServi
+      0     0,00       3,77      92,54     404   1 cfprefsd
+      0     0,00       5,47       0,08   90156 …56 CGPDFService
+      0     0,00       1,61       0,36     623 622 chrome_crashpad
+      0     0,00       2,23       0,04   85743 …42 chrome_crashpad
+      0     0,00      22,67       5,48   79110   1 chronod
+      0     0,00      22,22       0,10   90400 …00 ClassroomSettin
+      0     0,00       9,34      22,78   29625   1 cloudd
+      0     0,00       2,47       0,03   90268   1 com.apple.acces
+      0     0,00      28,47       4,25   90100 …00 com.apple.appki
+      0     0,00      32,80       0,61   90355 …55 com.apple.appki
+      0     0,00      35,23       0,68   90371 …71 com.apple.appki
+      0     0,00       2,47       0,03   90136 …36 com.apple.audio
+      0     0,00       2,77       0,02   90143 …43 com.apple.audio
+      0     0,00       2,77       0,02   90144 …44 com.apple.audio
+      0     0,00       2,77       0,02   90145 …45 com.apple.audio
+      0     0,00       2,77       0,02   90146 …46 com.apple.audio
+      0     0,00       2,77       0,02   90147 …47 com.apple.audio
+      0     0,00       2,77       0,01   90151 …51 com.apple.audio
+      0     0,00       9,19       0,66   79451   1 com.apple.CoreS
+      0     0,00      10,30      50,45     667 667 com.apple.dock.
+      0     0,00      13,81       1,40   90082   1 com.apple.geod
+      0     0,00       4,09       1,75   77193   1 com.apple.hiser
+      0     0,00      13,08      22,08   77615   1 com.apple.quick
+      0     0,00       8,95       0,11   90271   1 com.apple.Safar
+      0     0,00       5,69       0,03   90148 …48 com.apple.SiriT
+      0     0,00       5,69       0,03   90149 …49 com.apple.SiriT
+      0     0,00       5,72       0,04   90178 …78 com.apple.SiriT
+      0     0,00      12,86       0,35   90075   1 CommCenter
+      0     0,00       2,67       0,41     719   1 commerce
+      0     0,00       9,55       0,64   90279   1 contactsd
+      0     0,00      10,77       0,09   90395   1 contactsdonatio
+      0     0,00       4,11       6,29   60079   1 containermanage
+      0     0,00       9,02       1,23   79157   1 contentlinkingd
+      0     0,00       6,89       0,28   90105   1 ContextService
+      0     0,00      18,89      26,30   76884   1 ContextStoreAge
+      0     0,00       4,14       3,67     574   1 ContinuityCaptu
+      0     0,00      28,62     277,28     580   1 ControlCenter
+      0     0,00       6,88       1,33   77097   1 coreauthd
+      0     0,00       9,30       0,60   79111   1 CoreLocationAge
+      0     0,00      14,14       1,25   79226   1 CoreServicesUIA
+      0     0,00       5,86       9,05     733   1 corespeechd
+      0     0,00      19,16     111,85     672   1 corespotlightd
+      0     0,00       3,81       0,02   90104 …04 CSExattrCryptoS
+      0     0,00       2,48       0,02   90071   1 csnameddatad
+      0     0,00       1,28       0,22     747   1 ctkahp
+      0     0,00       5,95       0,06   90122   1 ctkd
+      0     0,00      32,78     468,00     668   1 CursorUIViewSer
+      0     0,00       7,47      11,13     743   1 diagnostics_age
+      0     0,00       1,33       1,36   30926 …26 diskimages-help
+      0     0,00       1,09       0,10    6698   1 DiskUnmountWatc
+      0     0,00       3,42     111,58     390   1 distnoted
+      0     0,00       8,58       1,25   87728   1 dmd
+      0     0,00      23,09     140,14     579   1 Dock
+      0     0,00      12,52       0,62   84251 …51 DockHelper
+      0     0,00      18,56       0,36   90276   1 donotdisturbd
+      0     0,00      10,62       0,05   90237 …37 extensionkitser
+      0     0,00       8,80       0,03   90391 …91 extensionkitser
+      0     0,00       3,48       3,07     569   1 familycircled
+      0     0,00      24,72       0,09   90396 …96 FamilySettings
+      0     0,00      12,19       0,43   87776   1 fileproviderd
+      0     0,00      35,80     243,71     583   1 Finder
+      0     0,00       7,05       0,03   90283   1 followupd
+      0     0,00      21,25       0,09   90398 …98 FollowUpSetting
+      0     0,00       2,45      19,67     581   1 fontd
+      0     0,00       0,00       0,50     588   1 fontworker
+      0     0,00     202,06     309,71   85741   1 Google Chrome
+      0     0,00      57,77     693,04   85747   1 Google Chrome H
+      0     0,00      68,52      73,86   85748   1 Google Chrome H
+      0     0,00      15,97       2,39   85749   1 Google Chrome H
+      0     0,00      12,59       3,68   85833   1 Google Chrome H
+      0     0,00      15,61       1,99   85834   1 Google Chrome H
+      0     0,00      70,16      39,57   85901   1 Google Chrome H
+      0     0,00      33,33       3,14   85929   1 Google Chrome H
+      0     0,00      48,44     480,83   86098   1 Google Chrome H
+      0     0,00      30,77       1,65   86117   1 Google Chrome H
+      0     0,00      25,16       0,81   86118   1 Google Chrome H
+      0     0,00      46,03       1,59   86119   1 Google Chrome H
+      0     0,00      27,97       0,93   86120   1 Google Chrome H
+      0     0,00      32,22       1,75   86121   1 Google Chrome H
+      0     0,00      27,77       1,16   86122   1 Google Chrome H
+      0     0,00      41,66       1,27   86123   1 Google Chrome H
+      0     0,00      28,41       1,26   86124   1 Google Chrome H
+      0     0,00      25,09       0,84   86125   1 Google Chrome H
+      0     0,00      25,33       0,89   86126   1 Google Chrome H
+      0     0,00      25,44       0,75   86127   1 Google Chrome H
+      0     0,00      13,70       0,60   86128   1 Google Chrome H
+      0     0,00      25,77       0,83   86130   1 Google Chrome H
+      0     0,00      25,92       0,95   86131   1 Google Chrome H
+      0     0,00      24,61       0,83   86132   1 Google Chrome H
+      0     0,00      13,56       0,56   86133   1 Google Chrome H
+      0     0,00      13,86       0,59   86135   1 Google Chrome H
+      0     0,00      14,09       0,63   86136   1 Google Chrome H
+      0     0,00      25,42       0,67   86142   1 Google Chrome H
+      0     0,00      13,59       0,52   86144   1 Google Chrome H
+      0     0,00      13,98       0,57   86145   1 Google Chrome H
+      0     0,00      14,12       0,57   86146   1 Google Chrome H
+      0     0,00      13,48       0,54   86148   1 Google Chrome H
+      0     0,00      13,95       0,60   86151   1 Google Chrome H
+      0     0,00      13,89       0,53   86153   1 Google Chrome H
+      0     0,00      13,75       0,54   86158   1 Google Chrome H
+      0     0,00      13,61       0,51   86159   1 Google Chrome H
+      0     0,00      25,06       0,79   86160   1 Google Chrome H
+      0     0,00      14,03       0,56   86161   1 Google Chrome H
+      0     0,00      13,64       0,48   86162   1 Google Chrome H
+      0     0,00      14,11       0,51   86165   1 Google Chrome H
+      0     0,00      27,41       0,75   86166   1 Google Chrome H
+      0     0,00      14,31       0,59   86168   1 Google Chrome H
+      0     0,00      13,80       0,48   86173   1 Google Chrome H
+      0     0,00      13,22       0,51   86174   1 Google Chrome H
+      0     0,00      13,58       0,48   86177   1 Google Chrome H
+      0     0,00      13,91       0,56   86178   1 Google Chrome H
+      0     0,00      25,16       0,71   86180   1 Google Chrome H
+      0     0,00      13,69       0,46   86181   1 Google Chrome H
+      0     0,00      13,88       0,50   86183   1 Google Chrome H
+      0     0,00      13,09       2,03   86487   1 Google Chrome H
+      0     0,00      46,25       8,21   86491   1 Google Chrome H
+      0     0,00      14,33      84,36   86492   1 Google Chrome H
+      0     0,00      19,58      16,83   86717   1 Google Chrome H
+      0     0,00     114,08      34,32   86750   1 Google Chrome H
+      0     0,00      42,45      61,93   86774   1 Google Chrome H
+      0     0,00      30,03       1,09   86803   1 Google Chrome H
+      0     0,00      42,73       0,79   86826   1 Google Chrome H
+      0     0,00      21,23       1,17   87715   1 Google Chrome H
+      0     0,00      60,38      22,11   89542   1 Google Chrome H
+      0     0,00      12,12       0,23   89561   1 Google Chrome H
+      0     0,00      33,34       0,26   89565   1 Google Chrome H
+      0     0,00      28,80       0,26   89566   1 Google Chrome H
+      0     0,00      27,78       0,27   89567   1 Google Chrome H
+      0     0,00      28,25       0,27   89568   1 Google Chrome H
+      0     0,00      48,50       1,10   89793   1 Google Chrome H
+      0     0,00      40,33       0,21   89794   1 Google Chrome H
+      0     0,00      42,33       0,45   89795   1 Google Chrome H
+      0     0,00      64,64      73,09   89796   1 Google Chrome H
+      0     0,00      51,62      25,54   89912   1 Google Chrome H
+      0     0,00      82,75       6,53   90098   1 Google Chrome H
+      0     0,00      46,55       0,19   90161   1 Google Chrome H
+      0     0,00      45,55       1,80   90162   1 Google Chrome H
+      0     0,00     118,53      19,04   90176   1 Google Chrome H
+      0     0,00      25,97       0,17   90326   1 Google Chrome H
+      0     0,00      97,70       6,41   90349   1 Google Chrome H
+      0     0,00     109,06       1,05   90411   1 Google Chrome H
+      0     0,00      21,25       0,09   90397 …97 HeadphoneSettin
+      0     0,00       8,06       9,45     749   1 HitVPN
+      0     0,00      10,34       3,94   77401   1 homed
+      0     0,00       2,38       0,81     738   1 icdd
+      0     0,00      11,56       0,14   90118   1 iCloudNotificat
+      0     0,00      12,56       3,96   77523   1 iconservicesage
+      0     0,00       8,19      17,91     553   1 identityservice
+      0     0,00       5,83       5,25     652   1 imagent
+      0     0,00       0,88       0,19    6960   1 IMAutomaticHist
+      0     0,00       3,97       1,44     589   1 imklaunchagent
+      0     0,00      11,62       0,65   90280 …80 IntelligencePla
+      0     0,00       9,94       0,14   90053   1 intelligentrout
+      0     0,00      11,12       0,44   86526   1 IOUIAgent
+      0     0,00       0,02       0,03   84263   1 ipcserver
+      0     0,00       9,53       0,37   79108   1 Keychain Circle
+      0     0,00      17,11       0,57   90295   1 knowledge-agent
+      0     0,00      10,00       0,02   90142 …42 KonaSynthesizer
+      0     0,00       7,14       0,21   90113   1 linkd
+      0     0,00       9,58       0,03   90286   1 localizationswi
+      0     0,00      24,27     191,29     154 154 loginwindow
+      0     0,00      10,39      28,54     406   1 lsd
+      0     0,00      10,36       0,06   90139 …39 MacinTalkAUSP
+      0     0,00       6,61       0,07   90096   1 maild
+      0     0,00       4,58       0,06   90294   1 ManagedSettings
+      0     0,00       8,95       0,42   90081   1 mapssyncd
+      0     0,00      10,91       0,05   90140 …40 MauiAUSP
+      0     0,00       3,95       0,07   54639   1 mbuseragent
+      0     0,00       8,05     117,63     419   1 mdbulkimport
+      0     0,00       2,00       0,04   90236 …36 MDRemoteService
+      0     0,00      19,11       0,10   90468   1 mdworker_shared
+      0     0,00      22,83       0,10   90474   1 mdworker_shared
+      0     0,00       1,39       0,13    5890   1 mdwrite
+      0     0,00       1,23       3,95     707   1 mediaremoteagen
+      0     0,00       4,03       0,05   90365   1 metrickitd
+      0     0,00     111,02      16,70   90361   1 Microsoft Power
+      0     0,00       6,25       6,19    6771   1 MobileDeviceUpd
+      0     0,00       9,09       0,11   90114   1 mobiletimerd
+      0     0,00       3,92       1,36   90152 …52 MTLCompilerServ
+      0     0,00       1,72       0,13   90225 …25 MTLCompilerServ
+      0     0,00       4,00       0,05   90368 …68 MTLCompilerServ
+      0     0,00      27,52       1,16   87735   1 naturallanguage
+      0     0,00      13,55       0,67   86975   1 nbagent
+      0     0,00       9,62       0,42   79132   1 neagent
+      0     0,00      13,44       0,34   90112   1 networkservicep
+      0     0,00      30,72      17,10   89804   1 Notes
+      0     0,00      25,67      50,22     567   1 NotificationCen
+      0     0,00      34,23       0,63   90394 …94 NotificationsSe
+      0     0,00      29,42       6,59   84838 …38 nsattributedstr
+      0     0,00      10,61      38,59     538   1 nsurlsessiond
+      0     0,00      23,22      15,19   85711   1 Obsidian
+      0     0,00      14,20       8,76   85712   1 Obsidian Helper
+      0     0,00       8,30       3,32   85713   1 Obsidian Helper
+      0     0,00      10,17       1,19   80281   1 OSDUIHelper
+      0     0,00       6,64      21,68     657 657 PAH_Extension
+      0     0,00      14,50       8,70   77053   1 parsecd
+      0     0,00       4,88       5,20     718   1 passd
+      0     0,00       7,30       0,27   79390   1 PasswordBreachA
+      0     0,00       6,62       6,99     534   1 pboard
+      0     0,00       5,67       0,30   79103   1 pbs
+      0     0,00      14,77       2,36   79106   1 pkd
+      0     0,00       2,03       0,02   90103 …03 PlugInLibrarySe
+      0     0,00       5,88       7,16    1828   1 PowerChime
+      0     0,00      11,64       0,28   89852   1 printtool
+      0     0,00      12,42       4,28   77191   1 proactived
+      0     0,00     128,53       6,06   90426 …32 pwsh
+      0     0,00      16,41       3,78   77631 …31 QuickLookSatell
+      0     0,00      20,55       0,25   90101 …01 QuickLookUIServ
+      0     0,00      19,42       0,10   90356 …56 QuickLookUIServ
+      0     0,00      19,62       0,10   90372 …72 QuickLookUIServ
+      0     0,00       7,53      30,74     542   1 rapportd
+      0     0,00       6,62       0,43   78066   1 rcd
+      0     0,00      13,86       0,85   90296   1 remindd
+      0     0,00      15,41      37,29   64042   1 remotepairingd
+      0     0,00      10,08       3,76   90064   1 replayd
+      0     0,00       4,78       0,03   90072   1 ReportCrash
+      0     0,00      15,11      11,34   79357   1 routined
+      0     0,00       6,81       0,35   79090   1 ScopedBookmarkA
+      0     0,00      11,58       0,28   90290   1 ScreenTimeAgent
+      0     0,00      20,61       2,02   79114 …14 ScreenTimeWidge
+      0     0,00       7,34      13,67     414   1 secd
+      0     0,00       6,80       1,40   77152   1 secinitd
+      0     0,00       1,36       0,15    1146   1 seserviced
+      0     0,00       8,45       0,11   90126   1 SetStoreUpdateS
+      0     0,00       6,27       9,70     570   1 sharedfilelistd
+      0     0,00      17,67     175,66     562   1 sharingd
+      0     0,00       0,45       0,10    1116   1 SimLaunchHost.a
+      0     0,00       8,53       0,39   79452   1 SimulatorTrampo
+      0     0,00      17,45       0,33   90111   1 siriactionsd
+      0     0,00      10,64       0,03   90138 …38 SiriAUSP
+      0     0,00      11,47       1,84   90115   1 siriknowledged
+      0     0,00      13,28       1,23   84837   1 SoftwareUpdateN
+      0     0,00       9,08       0,02   90131 …31 SpeechSynthesis
+      0     0,00      91,91     682,90     669   1 Spotlight
+      0     0,00       3,50       1,61     571   1 StatusKitAgent
+      0     0,00      49,23       4,15   79119 …19 StocksWidget
+      0     0,00       1,52       0,11    1123   1 storedownloadd
+      0     0,00      14,42       0,58   90251   1 storekitagent
+      0     0,00       3,53       3,29    1165   1 storeuid
+      0     0,00      11,91       0,94   79728   1 studentd
+      0     0,00      14,84      23,14   77307   1 suggestd
+      0     0,00      11,98       0,44   90095   1 swcd
+      0     0,00      10,23       0,22   90076   1 syncdefaultsd
+      0     0,00      36,98       1,22   90390   1 System Settings
+      0     0,00       4,14       4,01     582   1 SystemUIServer
+      0     0,00       9,23       7,55   76896   1 tccd
+      0     0,00      75,78      14,54   61731   1 Terminal
+      0     0,00      92,48      22,58   90354   1 TextEdit
+      0     0,00      10,70      22,18     744   1 TextInputMenuAg
+      0     0,00      15,84       3,27   79361   1 TextInputSwitch
+      0     0,00      15,16       0,30   87665 …65 ThemeWidgetCont
+      0     0,00      16,09       0,71   89782 …82 ThumbnailExtens
+      0     0,00       8,98       6,85   54459   1 tipsd
+      0     0,00      40,45      27,83   89783   1 TipTop VPN
+      0     0,00      10,66       0,25   90308   1 transparencyd
+      0     0,00      10,16       0,74   89882   1 triald
+      0     0,00       8,36     128,73     440   1 trustd
+      0     0,00       4,70       0,03   90471   1 trustevaluation
+      0     0,00       9,25      12,84   20581   1 UIKitSystem
+      0     0,00       4,50      13,54     532   1 universalaccess
+      0     0,00      12,56       0,16   90292   1 UsageTrackingAg
+      0     0,00       0,41       0,13    6772   1 USBAgent
+      0     0,00       6,27      11,15     665   1 useractivityd
+      0     0,00       6,70      31,85     525   1 UserEventAgent
+      0     0,00       9,17      10,03     540   1 usernoted
+      0     0,00       5,64       4,28     545   1 usernotificatio
+      0     0,00       7,80       5,48    3840   1 UserNotificatio
+      0     0,00       6,91      42,20     597   1 ViewBridgeAuxil
+      0     0,00       8,77       0,15   90150   1 voicebankingd
+      0     0,00      21,58       0,10   90399 …99 VPN
+      0     0,00       0,67       0,63    4925 …25 VTDecoderXPCSer
+      0     0,00       6,67      13,77   49508 …08 VTDecoderXPCSer
+      0     0,00       6,34      13,20     587   1 WallpaperAgent
+      0     0,00       1,30       0,88     609 609 WallpaperImageE
+      0     0,00       4,97      46,60   49504 …04 WallpaperVideoE
+      0     0,00       0,70       0,20   90137 …37 WardaSynthesize
+      0     0,00       6,77       0,03   90141 …41 WardaSynthesize
+      0     0,00      27,62      16,28   79120 …20 WeatherWidget
+      0     0,00       9,03       0,11   90272   1 webprivacyd
+      0     0,00       8,17      72,87     556   1 WiFiAgent
+      0     0,00       3,64       0,10   90235   1 WiFiVelocityAge
+      0     0,00      22,97     676,32     548   1 WindowManager
+      0     0,00      14,19       0,96   79122 …22 WorldClockWidge
+      0     0,00       1,94       0,01   90334   1 XProtect
+      0     0,00       4,39       0,69   90335   1 XProtectPluginS
+      0     0,00      10,52       0,06   90211 …11 XprotectService
+      0     0,00     106,03     768,49     564   1 Yandex
+      0     0,00      27,69     202,62     726   1 Yandex Helper
+      0     0,00       6,17      19,02     728   1 Yandex Helper
+      0     0,00       6,86      29,09     831   1 Yandex Helper
+      0     0,00       3,88      14,98     927   1 Yandex Helper
+      0     0,00       3,89      18,46   26546   1 Yandex Helper
+      0     0,00      47,31     403,51     725   1 Yandex Helper (
+      0     0,00       6,23       5,71     755   1 Yandex Helper (
+      0     0,00      21,48      45,24     756   1 Yandex Helper (
+      0     0,00       8,64      24,11     832   1 Yandex Helper (
+      0     0,00      13,77       3,82   49085   1 Yandex Helper (
+      0     0,00      16,50       1,13   80282   1 Yandex Helper (
+      0     0,00      10,95       0,95   80283   1 Yandex Helper (
+      0     0,00      22,41       4,83   84283   1 Yandex Helper (
+      0     0,00      15,45       2,11   85679   1 Yandex Helper (
+      0     0,00      26,67       2,43   87066   1 Yandex Helper (
+      0     0,00      27,09       2,27   87253   1 Yandex Helper (
+      0     0,00      23,53       6,53   87254   1 Yandex Helper (
+      0     0,00      18,83       7,46   87283   1 Yandex Helper (
+      0     0,00      28,05       1,96   87324   1 Yandex Helper (
+      0     0,00      18,59       7,19   87326   1 Yandex Helper (
+      0     0,00      35,97       5,81   87329   1 Yandex Helper (
+      0     0,00      11,55       0,17   89813   1 Yandex Helper (
+      0     0,00       0,97       0,11   61737 …32 zsh
+
+PS /Users/mac/untitled8/Mo01_Doronin> Get-Process | Sort-Object CPU
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      0     0,00       0,00       0,00       0 …32
+      0     0,00       0,00       0,00   53789 …89
+      0     0,00       0,00       0,00   61732 …32
+      0     0,00       0,00       0,00   75473 …73
+      0     0,00       0,00       0,00   77145 …45
+      0     0,00       0,00       0,00   77167 …67
+      0     0,00       0,00       0,00   77546 …46
+      0     0,00       0,00       0,00   79125 …25
+      0     0,00       0,00       0,00   79127 …27
+      0     0,00       0,00       0,00   53746 …46
+      0     0,00       0,00       0,00   79141 …41
+      0     0,00       0,00       0,00   79185 …85
+      0     0,00       0,00       0,00   79300 …00
+      0     0,00       0,00       0,00   79423 …23
+      0     0,00       0,00       0,00   85979   1
+      0     0,00       0,00       0,00   89822 …22
+      0     0,00       0,00       0,00   90066 …66
+      0     0,00       0,00       0,00   90077 …77
+      0     0,00       0,00       0,00   90078 …78
+      0     0,00       0,00       0,00   79154 …54
+      0     0,00       0,00       0,00   90083   1
+      0     0,00       0,00       0,00   52535   1
+      0     0,00       0,00       0,00   30924 …24
+      0     0,00       0,00       0,00     601 601
+      0     0,00       0,00       0,00     621 621
+      0     0,00       0,00       0,00     627 627
+      0     0,00       0,00       0,00     698 698
+      0     0,00       0,00       0,00     717 717
+      0     0,00       0,00       0,00     754   1
+      0     0,00       0,00       0,00     765   1
+      0     0,00       0,00       0,00     785 785
+      0     0,00       0,00       0,00   52415 …15
+      0     0,00       0,00       0,00     826   1
+      0     0,00       0,00       0,00    1098 …98
+      0     0,00       0,00       0,00    1107 …07
+      0     0,00       0,00       0,00    1128 …28
+      0     0,00       0,00       0,00    1147 …47
+      0     0,00       0,00       0,00    1304 …04
+      0     0,00       0,00       0,00    1313   1
+      0     0,00       0,00       0,00   29507   1
+      0     0,00       0,00       0,00   29520 …20
+      0     0,00       0,00       0,00    1096 …96
+      0     0,00       0,00       0,00     590 590
+      0     0,00       0,00       0,00   90084   1
+      0     0,00       0,00       0,00   90086   1
+      0     0,00       0,00       0,00   90257 …57
+      0     0,00       0,00       0,00   90273 …73
+      0     0,00       0,00       0,00   90275 …75
+      0     0,00       0,00       0,00   90277 …77
+      0     0,00       0,00       0,00   90282 …82
+      0     0,00       0,00       0,00   90289 …89
+      0     0,00       0,00       0,00   90291 …91
+      0     0,00       0,00       0,00   90306 …06
+      0     0,00       0,00       0,00   90255 …55
+      0     0,00       0,00       0,00   90324 …24
+      0     0,00       0,00       0,00   90332 …32
+      0     0,00       0,00       0,00   90362 …62
+      0     0,00       0,00       0,00   90367 …67
+      0     0,00       0,00       0,00   90429 …29
+      0     0,00       0,00       0,00   90430 …30
+      0     0,00       0,00       0,00   90431 …31
+      0     0,00       0,00       0,00   90470 …70
+      0     0,00       0,00       0,00   90473   1
+      0     0,00       0,00       0,00   90331 …31
+      0     0,00       0,00       0,00   90085   1
+      0     0,00       0,00       0,00   90231 …31
+      0     0,00       0,00       0,00   90228 …28
+      0     0,00       0,00       0,00   90087   1
+      0     0,00       0,00       0,00   90088   1
+      0     0,00       0,00       0,00   90089   1
+      0     0,00       0,00       0,00   90090   1
+      0     0,00       0,00       0,00   90091 …91
+      0     0,00       0,00       0,00   90092   1
+      0     0,00       0,00       0,00   90093   1
+      0     0,00       0,00       0,00   90094 …94
+      0     0,00       0,00       0,00   90229 …29
+      0     0,00       0,00       0,00   90102 …02
+      0     0,00       0,00       0,00   90123 …23
+      0     0,00       0,00       0,00   90124 …24
+      0     0,00       0,00       0,00   90125 …25
+      0     0,00       0,00       0,00   90127 …27
+      0     0,00       0,00       0,00   90130 …30
+      0     0,00       0,00       0,00   90201 …01
+      0     0,00       0,00       0,00   90220 …20
+      0     0,00       0,00       0,00   90227 …27
+      0     0,00       0,00       0,00   90119 …19
+      0     0,00       0,00       0,00     586 586
+      0     0,00       0,00       0,00   74040 …40
+      0     0,00       0,00       0,00     554   1
+      0     0,00       0,00       0,00     130 130
+      0     0,00       0,00       0,00     132 132
+      0     0,00       0,00       0,00     133 133
+      0     0,00       0,00       0,00     135 135
+      0     0,00       0,00       0,00     139 139
+      0     0,00       0,00       0,00     140 140
+      0     0,00       0,00       0,00     141 141
+      0     0,00       0,00       0,00     145 145
+      0     0,00       0,00       0,00     128 128
+      0     0,00       0,00       0,00     147 147
+      0     0,00       0,00       0,00     149 149
+      0     0,00       0,00       0,00     150 150
+      0     0,00       0,00       0,00     151 151
+      0     0,00       0,00       0,00     152 152
+      0     0,00       0,00       0,00     155 155
+      0     0,00       0,00       0,00     156 156
+      0     0,00       0,00       0,00     157 157
+      0     0,00       0,00       0,00     158 158
+      0     0,00       0,00       0,00     148 148
+      0     0,00       0,00       0,00     127 127
+      0     0,00       0,00       0,00     126 126
+      0     0,00       0,00       0,00     125 125
+      0     0,00       0,00       0,00       1   1
+      0     0,00       0,00       0,00      83  83
+      0     0,00       0,00       0,00      85  85
+      0     0,00       0,00       0,00      87  87
+      0     0,00       0,00       0,00      88  88
+      0     0,00       0,00       0,00      89  89
+      0     0,00       0,00       0,00      92  92
+      0     0,00       0,00       0,00      95  95
+      0     0,00       0,00       0,00      97  97
+      0     0,00       0,00       0,00      98  98
+      0     0,00       0,00       0,00     103 103
+      0     0,00       0,00       0,00     108 108
+      0     0,00       0,00       0,00     112 112
+      0     0,00       0,00       0,00     114 114
+      0     0,00       0,00       0,00     115 115
+      0     0,00       0,00       0,00     119 119
+      0     0,00       0,00       0,00     558 558
+      0     0,00       0,00       0,00     123 123
+      0     0,00       0,00       0,00     124 124
+      0     0,00       0,00       0,00     159 159
+      0     0,00       0,00       0,00     184 184
+      0     0,00       0,00       0,00     122 122
+      0     0,00       0,00       0,00     196 196
+      0     0,00       0,00       0,00     329 329
+      0     0,00       0,00       0,00     334 334
+      0     0,00       0,00       0,00     336 336
+      0     0,00       0,00       0,00     337 337
+      0     0,00       0,00       0,00     338 338
+      0     0,00       0,00       0,00     340 340
+      0     0,00       0,00       0,00     343   1
+      0     0,00       0,00       0,00     345   1
+      0     0,00       0,00       0,00     288   1
+      0     0,00       0,00       0,00     349 349
+      0     0,00       0,00       0,00     365 365
+      0     0,00       0,00       0,00     369   1
+      0     0,00       0,00       0,00     378 378
+      0     0,00       0,00       0,00     379  92
+      0     0,00       0,00       0,00     418   1
+      0     0,00       0,00       0,00     443 443
+      0     0,00       0,00       0,00     451   1
+      0     0,00       0,00       0,00     185 185
+      0     0,00       0,00       0,00     353   1
+      0     0,00       0,00       0,00     276 276
+      0     0,00       0,00       0,00     344 344
+      0     0,00       0,00       0,00     221   1
+      0     0,00       0,00       0,00     215   1
+      0     0,00       0,00       0,00     200 200
+      0     0,00       0,00       0,00     245 245
+      0     0,00       0,00       0,00     251 251
+      0     0,00       0,00       0,00     252 252
+      0     0,00       0,00       0,00     253 253
+      0     0,00       0,00       0,00     255 255
+      0     0,00       0,00       0,00     213 213
+      0     0,00       0,00       0,00     274 274
+      0     0,00       0,00       0,00     260 260
+      0     0,00       0,00       0,00     264 264
+      0     0,00       0,00       0,00     267   1
+      0     0,00       0,00       0,00     197 197
+      0     0,00       0,00       0,00     269 269
+      0     0,00       0,00       0,00     271 271
+      0     0,00       0,00       0,00     273 273
+      0     0,00       0,00       0,00     258 258
+      0     0,00       0,00       0,00     203   1
+      0     0,00       0,00       0,01   32176   0
+      0     0,00       4,41       0,01   90106 …06 CategoriesServi
+      0     0,00       1,94       0,01   90334   1 XProtect
+      0     0,00       2,77       0,01   90151 …51 com.apple.audio
+      0     0,00       2,03       0,02   90103 …03 PlugInLibrarySe
+      0     0,00       4,41       0,02   90108 …08 CategoriesServi
+      0     0,00       2,48       0,02   90071   1 csnameddatad
+      0     0,00       2,77       0,02   90145 …45 com.apple.audio
+      0     0,00      10,00       0,02   90142 …42 KonaSynthesizer
+      0     0,00       2,77       0,02   90144 …44 com.apple.audio
+      0     0,00       2,77       0,02   90146 …46 com.apple.audio
+      0     0,00       2,77       0,02   90143 …43 com.apple.audio
+      0     0,00       9,08       0,02   90131 …31 SpeechSynthesis
+      0     0,00       2,77       0,02   90147 …47 com.apple.audio
+      0     0,00       3,81       0,02   90104 …04 CSExattrCryptoS
+      0     0,00       8,80       0,03   90391 …91 extensionkitser
+      0     0,00       4,78       0,03   90072   1 ReportCrash
+      0     0,00       0,02       0,03   84263   1 ipcserver
+      0     0,00       9,58       0,03   90286   1 localizationswi
+      0     0,00       4,50       0,03   90471   1 trustevaluation
+      0     0,00       2,47       0,03   90136 …36 com.apple.audio
+      0     0,00       2,47       0,03   90268   1 com.apple.acces
+      0     0,00      10,64       0,03   90138 …38 SiriAUSP
+      0     0,00       7,05       0,03   90283   1 followupd
+      0     0,00       6,77       0,03   90141 …41 WardaSynthesize
+      0     0,00       5,69       0,03   90148 …48 com.apple.SiriT
+      0     0,00       5,69       0,03   90149 …49 com.apple.SiriT
+      0     0,00       2,23       0,04   85743 …42 chrome_crashpad
+      0     0,00       2,00       0,04   90236 …36 MDRemoteService
+      0     0,00       5,72       0,04   90178 …78 com.apple.SiriT
+      0     0,00       4,00       0,05   90368 …68 MTLCompilerServ
+      0     0,00       4,03       0,05   90365   1 metrickitd
+      0     0,00      10,62       0,05   90237 …37 extensionkitser
+      0     0,00      10,91       0,05   90140 …40 MauiAUSP
+      0     0,00       4,50       0,05   90116 …16 CategoriesServi
+      0     0,00      10,36       0,06   90139 …39 MacinTalkAUSP
+      0     0,00      10,52       0,06   90211 …11 XprotectService
+      0     0,00       7,17       0,06   90099   1 businessservice
+      0     0,00       5,95       0,06   90122   1 ctkd
+      0     0,00       4,58       0,06   90294   1 ManagedSettings
+      0     0,00      25,00       0,07   90475   1 AXVisualSupport
+      0     0,00       3,95       0,07   54639   1 mbuseragent
+      0     0,00       6,61       0,07   90096   1 maild
+      0     0,00       5,98       0,07   90129   1 AssetCacheLocat
+      0     0,00       5,47       0,08   90156 …56 CGPDFService
+      0     0,00      21,27       0,09   90397 …97 HeadphoneSettin
+      0     0,00      22,52       0,09   90393 …93 Appearance
+      0     0,00      10,77       0,09   90395   1 contactsdonatio
+      0     0,00      24,73       0,09   90396 …96 FamilySettings
+      0     0,00      21,25       0,09   90398 …98 FollowUpSetting
+      0     0,00      19,64       0,10   90372 …72 QuickLookUIServ
+      0     0,00      19,34       0,10   90356 …56 QuickLookUIServ
+      0     0,00      21,55       0,10   90399 …99 VPN
+      0     0,00      19,28       0,10   90474   1 mdworker_shared
+      0     0,00      19,02       0,10   90468   1 mdworker_shared
+      0     0,00       0,45       0,10    1116   1 SimLaunchHost.a
+      0     0,00       1,09       0,10    6698   1 DiskUnmountWatc
+      0     0,00       3,64       0,10   90235   1 WiFiVelocityAge
+      0     0,00      22,22       0,10   90400 …00 ClassroomSettin
+      0     0,00       1,52       0,11    1123   1 storedownloadd
+      0     0,00       0,97       0,11   61737 …32 zsh
+      0     0,00       9,05       0,11   90109 …09 CategoriesServi
+      0     0,00       9,02       0,11   90272   1 webprivacyd
+      0     0,00       9,11       0,11   90114   1 mobiletimerd
+      0     0,00       8,95       0,11   90271   1 com.apple.Safar
+      0     0,00       8,45       0,11   90126   1 SetStoreUpdateS
+      0     0,00       0,41       0,13    6772   1 USBAgent
+      0     0,00       8,25       0,13   90134   1 AudioComponentR
+      0     0,00       1,72       0,13   90225 …25 MTLCompilerServ
+      0     0,00       1,39       0,13    5890   1 mdwrite
+      0     0,00      11,56       0,14   90118   1 iCloudNotificat
+      0     0,00       9,94       0,14   90053   1 intelligentrout
+      0     0,00       8,77       0,15   90150   1 voicebankingd
+      0     0,00       1,36       0,15    1146   1 seserviced
+      0     0,00      12,34       0,16   90314   1 adprivacyd
+      0     0,00       8,95       0,16   79118 …18 CalendarWidgetE
+      0     0,00      12,56       0,16   90292   1 UsageTrackingAg
+      0     0,00      11,55       0,17   89813   1 Yandex Helper (
+      0     0,00      25,95       0,18   90326   1 Google Chrome H
+      0     0,00      46,53       0,19   90161   1 Google Chrome H
+      0     0,00       0,88       0,19    6960   1 IMAutomaticHist
+      0     0,00       0,70       0,20   90137 …37 WardaSynthesize
+      0     0,00       7,14       0,21   90113   1 linkd
+      0     0,00      40,33       0,21   89794   1 Google Chrome H
+      0     0,00      10,23       0,22   90076   1 syncdefaultsd
+      0     0,00       1,28       0,22     747   1 ctkahp
+      0     0,00       9,58       0,22   90120   1 akd
+      0     0,00      12,12       0,23   89561   1 Google Chrome H
+      0     0,00      29,91       0,24   90392 …92 AppleIDSettings
+      0     0,00      10,66       0,25   90308   1 transparencyd
+      0     0,00      20,50       0,25   90101 …01 QuickLookUIServ
+      0     0,00      33,34       0,26   89565   1 Google Chrome H
+      0     0,00      28,80       0,26   89566   1 Google Chrome H
+      0     0,00      14,97       0,26   90253   1 amsengagementd
+      0     0,00      27,78       0,27   89567   1 Google Chrome H
+      0     0,00       7,30       0,27   79390   1 PasswordBreachA
+      0     0,00      28,25       0,27   89568   1 Google Chrome H
+      0     0,00      11,56       0,28   89852   1 printtool
+      0     0,00      11,58       0,28   90290   1 ScreenTimeAgent
+      0     0,00       6,89       0,28   90105   1 ContextService
+      0     0,00       5,67       0,30   79103   1 pbs
+      0     0,00      15,11       0,30   87665 …65 ThemeWidgetCont
+      0     0,00      13,70       0,32   90252   1 amsaccountsd
+      0     0,00      17,45       0,33   90111   1 siriactionsd
+      0     0,00      13,44       0,34   90112   1 networkservicep
+      0     0,00       6,81       0,35   79090   1 ScopedBookmarkA
+      0     0,00      12,86       0,35   90075   1 CommCenter
+      0     0,00       1,61       0,36     623 622 chrome_crashpad
+      0     0,00      18,56       0,36   90276   1 donotdisturbd
+      0     0,00       9,50       0,37   79108   1 Keychain Circle
+      0     0,00      14,03       0,38   89994   1 AccessibilityVi
+      0     0,00       8,42       0,39   79452   1 SimulatorTrampo
+      0     0,00      10,80       0,39   90107 …07 CategoriesServi
+      0     0,00      17,16       0,39   90293   1 calaccessd
+      0     0,00       2,67       0,41     719   1 commerce
+      0     0,00       9,17       0,42   90110 …10 CategoriesServi
+      0     0,00       8,95       0,42   90081   1 mapssyncd
+      0     0,00       9,62       0,42   79132   1 neagent
+      0     0,00       6,62       0,43   78066   1 rcd
+      0     0,00      12,19       0,43   87776   1 fileproviderd
+      0     0,00      11,02       0,44   86526   1 IOUIAgent
+      0     0,00      11,98       0,44   90095   1 swcd
+      0     0,00      42,33       0,45   89795   1 Google Chrome H
+      0     0,00      13,69       0,47   86181   1 Google Chrome H
+      0     0,00      13,80       0,48   86173   1 Google Chrome H
+      0     0,00      13,58       0,48   86177   1 Google Chrome H
+      0     0,00      13,64       0,48   86162   1 Google Chrome H
+      0     0,00       9,11       0,49   79701   1 BackgroundTaskM
+      0     0,00      13,88       0,50   86183   1 Google Chrome H
+      0     0,00       0,00       0,50     588   1 fontworker
+      0     0,00      13,22       0,51   86174   1 Google Chrome H
+      0     0,00      13,61       0,51   86159   1 Google Chrome H
+      0     0,00      14,11       0,51   86165   1 Google Chrome H
+      0     0,00      13,59       0,52   86144   1 Google Chrome H
+      0     0,00      13,89       0,53   86153   1 Google Chrome H
+      0     0,00      13,48       0,54   86148   1 Google Chrome H
+      0     0,00      13,75       0,54   86158   1 Google Chrome H
+      0     0,00      14,03       0,56   86161   1 Google Chrome H
+      0     0,00      13,91       0,56   86178   1 Google Chrome H
+      0     0,00      13,56       0,56   86133   1 Google Chrome H
+      0     0,00      17,11       0,57   90295   1 knowledge-agent
+      0     0,00      14,12       0,57   86146   1 Google Chrome H
+      0     0,00      13,98       0,57   86145   1 Google Chrome H
+      0     0,00      14,42       0,58   90251   1 storekitagent
+      0     0,00      14,31       0,59   86168   1 Google Chrome H
+      0     0,00      13,86       0,59   86135   1 Google Chrome H
+      0     0,00      12,09       0,60   84788   1 AppSSOAgent
+      0     0,00      13,70       0,60   86128   1 Google Chrome H
+      0     0,00       9,16       0,60   79111   1 CoreLocationAge
+      0     0,00      13,95       0,60   86151   1 Google Chrome H
+      0     0,00      32,81       0,61   90355 …55 com.apple.appki
+      0     0,00      12,31       0,62   84251 …51 DockHelper
+      0     0,00      14,09       0,63   86136   1 Google Chrome H
+      0     0,00      34,12       0,63   90394 …94 NotificationsSe
+      0     0,00       0,67       0,63    4925 …25 VTDecoderXPCSer
+      0     0,00       9,55       0,64   90279   1 contactsd
+      0     0,00      11,62       0,65   90280 …80 IntelligencePla
+      0     0,00       9,03       0,66   79451   1 com.apple.CoreS
+      0     0,00      13,45       0,67   86975   1 nbagent
+      0     0,00      25,42       0,67   86142   1 Google Chrome H
+      0     0,00      35,22       0,69   90371 …71 com.apple.appki
+      0     0,00       4,39       0,69   90335   1 XProtectPluginS
+      0     0,00      16,09       0,71   89782 …82 ThumbnailExtens
+      0     0,00      25,16       0,71   86180   1 Google Chrome H
+      0     0,00      10,16       0,74   89882   1 triald
+      0     0,00      27,41       0,75   86166   1 Google Chrome H
+      0     0,00      25,44       0,75   86127   1 Google Chrome H
+      0     0,00      25,06       0,79   86160   1 Google Chrome H
+      0     0,00      42,73       0,79   86826   1 Google Chrome H
+      0     0,00       2,38       0,81     738   1 icdd
+      0     0,00      25,16       0,81   86118   1 Google Chrome H
+      0     0,00      25,77       0,83   86130   1 Google Chrome H
+      0     0,00      24,61       0,83   86132   1 Google Chrome H
+      0     0,00      25,09       0,84   86125   1 Google Chrome H
+      0     0,00      13,86       0,85   90296   1 remindd
+      0     0,00       1,30       0,88     609 609 WallpaperImageE
+      0     0,00      25,33       0,89   86126   1 Google Chrome H
+      0     0,00      27,97       0,93   86120   1 Google Chrome H
+      0     0,00      11,83       0,94   79728   1 studentd
+      0     0,00      10,95       0,95   80283   1 Yandex Helper (
+      0     0,00      25,92       0,95   86131   1 Google Chrome H
+      0     0,00      14,19       0,96   79122 …22 WorldClockWidge
+      0     0,00     109,06       1,05   90411   1 Google Chrome H
+      0     0,00      30,03       1,09   86803   1 Google Chrome H
+      0     0,00      48,50       1,10   89793   1 Google Chrome H
+      0     0,00      16,20       1,11   87726   1 callservicesd
+      0     0,00      16,50       1,14   80282   1 Yandex Helper (
+      0     0,00      27,77       1,16   86122   1 Google Chrome H
+      0     0,00      21,23       1,17   87715   1 Google Chrome H
+      0     0,00      27,45       1,18   87735   1 naturallanguage
+      0     0,00      10,00       1,19   80281   1 OSDUIHelper
+      0     0,00      36,66       1,22   90390   1 System Settings
+      0     0,00      13,06       1,23   84837   1 SoftwareUpdateN
+      0     0,00       9,00       1,23   79157   1 contentlinkingd
+      0     0,00       8,58       1,25   87728   1 dmd
+      0     0,00      13,95       1,25   79226   1 CoreServicesUIA
+      0     0,00      28,41       1,26   86124   1 Google Chrome H
+      0     0,00      41,66       1,27   86123   1 Google Chrome H
+      0     0,00       6,88       1,33   77097   1 coreauthd
+      0     0,00       3,92       1,36   90152 …52 MTLCompilerServ
+      0     0,00       1,33       1,36   30926 …26 diskimages-help
+      0     0,00       6,80       1,40   77152   1 secinitd
+      0     0,00      13,88       1,40   90082   1 com.apple.geod
+      0     0,00       3,97       1,44     589   1 imklaunchagent
+      0     0,00       0,19       1,50   90135 …35 CarbonComponent
+      0     0,00      46,03       1,59   86119   1 Google Chrome H
+      0     0,00       3,50       1,61     571   1 StatusKitAgent
+      0     0,00      30,77       1,65   86117   1 Google Chrome H
+      0     0,00      32,22       1,75   86121   1 Google Chrome H
+      0     0,00       4,05       1,75   77193   1 com.apple.hiser
+      0     0,00      45,55       1,80   90162   1 Google Chrome H
+      0     0,00      11,47       1,84   90115   1 siriknowledged
+      0     0,00      28,05       1,96   87324   1 Yandex Helper (
+      0     0,00      15,56       1,99   85834   1 Google Chrome H
+      0     0,00      20,61       2,02   79114 …14 ScreenTimeWidge
+      0     0,00      13,09       2,03   86487   1 Google Chrome H
+      0     0,00      15,45       2,11   85679   1 Yandex Helper (
+      0     0,00      27,09       2,27   87253   1 Yandex Helper (
+      0     0,00      14,73       2,37   79106   1 pkd
+      0     0,00      15,88       2,39   85749   1 Google Chrome H
+      0     0,00      26,67       2,43   87066   1 Yandex Helper (
+      0     0,00      11,69       2,49   90133   1 axassetsd
+      0     0,00       8,06       2,54   76982   1 bluetoothuserd
+      0     0,00       8,56       2,57   77399   1 assistantd
+      0     0,00       9,75       3,07   77143   1 audioaccessoryd
+      0     0,00       3,45       3,07     569   1 familycircled
+      0     0,00       2,94       3,12     741   1 AirPlayUIAgent
+      0     0,00      33,34       3,14   85929   1 Google Chrome H
+      0     0,00      15,81       3,27   79361   1 TextInputSwitch
+      0     0,00       3,48       3,29    1165   1 storeuid
+      0     0,00       8,30       3,32   85713   1 Obsidian Helper
+      0     0,00       4,14       3,67     574   1 ContinuityCaptu
+      0     0,00      12,53       3,68   85833   1 Google Chrome H
+      0     0,00      10,08       3,76   90064   1 replayd
+      0     0,00      16,41       3,78   77631 …31 QuickLookSatell
+      0     0,00      13,77       3,82   49085   1 Yandex Helper (
+      0     0,00      10,33       3,94   77401   1 homed
+      0     0,00       1,23       3,95     707   1 mediaremoteagen
+      0     0,00      12,56       3,96   77523   1 iconservicesage
+      0     0,00       3,97       4,01     582   1 SystemUIServer
+      0     0,00      48,64       4,15   79119 …19 StocksWidget
+      0     0,00      28,41       4,25   90100 …00 com.apple.appki
+      0     0,00       5,64       4,28     545   1 usernotificatio
+      0     0,00      12,45       4,29   77191   1 proactived
+      0     0,00      22,50       4,83   84283   1 Yandex Helper (
+      0     0,00       4,28       4,99     596   1 bird
+      0     0,00       4,91       5,20     718   1 passd
+      0     0,00       5,83       5,25     652   1 imagent
+      0     0,00       7,53       5,48    3840   1 UserNotificatio
+      0     0,00      22,66       5,48   79110   1 chronod
+      0     0,00       6,23       5,71     755   1 Yandex Helper (
+      0     0,00      35,97       5,81   87329   1 Yandex Helper (
+      0     0,00     127,16       6,19   90426 …32 pwsh
+      0     0,00       6,17       6,19    6771   1 MobileDeviceUpd
+      0     0,00       3,97       6,29   60079   1 containermanage
+      0     0,00     139,75       6,34   79249   1 AppleSpell
+      0     0,00      93,09       6,41   90349   1 Google Chrome H
+      0     0,00      23,53       6,53   87254   1 Yandex Helper (
+      0     0,00      63,70       6,54   90098   1 Google Chrome H
+      0     0,00      29,30       6,59   84838 …38 nsattributedstr
+      0     0,00       8,95       6,85   54459   1 tipsd
+      0     0,00       6,70       6,99     534   1 pboard
+      0     0,00       5,64       7,16    1828   1 PowerChime
+      0     0,00      18,59       7,19   87326   1 Yandex Helper (
+      0     0,00      18,83       7,46   87283   1 Yandex Helper (
+      0     0,00       9,23       7,55   76896   1 tccd
+      0     0,00      46,25       8,21   86491   1 Google Chrome H
+      0     0,00      14,45       8,70   77053   1 parsecd
+      0     0,00      14,20       8,76   85712   1 Obsidian Helper
+      0     0,00       5,86       9,05     733   1 corespeechd
+      0     0,00       7,09       9,45     749   1 HitVPN
+      0     0,00       6,27       9,70     570   1 sharedfilelistd
+      0     0,00       9,17      10,03     540   1 usernoted
+      0     0,00       7,47      11,13     743   1 diagnostics_age
+      0     0,00       6,27      11,16     665   1 useractivityd
+      0     0,00      15,00      11,34   79357   1 routined
+      0     0,00       9,16      12,84   20581   1 UIKitSystem
+      0     0,00       8,62      13,06    1120   1 AMPLibraryAgent
+      0     0,00       6,27      13,20     587   1 WallpaperAgent
+      0     0,00       4,45      13,54     532   1 universalaccess
+      0     0,00       7,34      13,67     414   1 secd
+      0     0,00       6,67      13,77   49508 …08 VTDecoderXPCSer
+      0     0,00      75,48      14,70   61731   1 Terminal
+      0     0,00       9,55      14,89     552   1 accountsd
+      0     0,00       3,88      14,98     927   1 Yandex Helper
+      0     0,00      23,09      15,19   85711   1 Obsidian
+      0     0,00      27,62      16,28   79120 …20 WeatherWidget
+      0     0,00     108,36      16,71   90361   1 Microsoft Power
+      0     0,00      19,58      16,83   86717   1 Google Chrome H
+      0     0,00      32,09      17,10   89804   1 Notes
+      0     0,00       8,16      17,91     553   1 identityservice
+      0     0,00       3,89      18,46   26546   1 Yandex Helper
+      0     0,00       6,17      19,03     728   1 Yandex Helper
+      0     0,00     117,84      19,07   90176   1 Google Chrome H
+      0     0,00       2,45      19,67     581   1 fontd
+      0     0,00       6,59      21,68     657 657 PAH_Extension
+      0     0,00      13,08      22,08   77615   1 com.apple.quick
+      0     0,00      60,38      22,12   89542   1 Google Chrome H
+      0     0,00      10,02      22,18     744   1 TextInputMenuAg
+      0     0,00       9,34      22,78   29625   1 cloudd
+      0     0,00      14,88      23,14   77307   1 suggestd
+      0     0,00      99,91      23,86   90354   1 TextEdit
+      0     0,00       8,66      24,11     832   1 Yandex Helper (
+      0     0,00       9,20      24,80   52411   1 appstoreagent
+      0     0,00      51,62      25,54   89912   1 Google Chrome H
+      0     0,00      18,61      26,38   76884   1 ContextStoreAge
+      0     0,00      40,09      27,83   89783   1 TipTop VPN
+      0     0,00      10,38      28,54     406   1 lsd
+      0     0,00       6,89      29,09     831   1 Yandex Helper
+      0     0,00       7,53      30,74     542   1 rapportd
+      0     0,00       6,70      31,85     525   1 UserEventAgent
+      0     0,00     114,08      34,33   86750   1 Google Chrome H
+      0     0,00      15,34      37,29   64042   1 remotepairingd
+      0     0,00      10,67      38,59     538   1 nsurlsessiond
+      0     0,00       5,88      39,03     603   1 AMPDeviceDiscov
+      0     0,00      70,25      39,59   85901   1 Google Chrome H
+      0     0,00      12,28      40,90   77183   1 BiomeAgent
+      0     0,00       6,86      42,21     597   1 ViewBridgeAuxil
+      0     0,00      21,52      45,24     756   1 Yandex Helper (
+      0     0,00       4,97      46,60   49504 …04 WallpaperVideoE
+      0     0,00      25,41      50,22     567   1 NotificationCen
+      0     0,00       9,84      50,45     667 667 com.apple.dock.
+      0     0,00       2,64      53,41     708   1 avconferenced
+      0     0,00      42,45      61,94   86774   1 Google Chrome H
+      0     0,00       9,75      72,89     556   1 WiFiAgent
+      0     0,00      64,64      73,09   89796   1 Google Chrome H
+      0     0,00      68,33      73,88   85748   1 Google Chrome H
+      0     0,00      14,33      84,36   86492   1 Google Chrome H
+      0     0,00       3,67      92,54     404   1 cfprefsd
+      0     0,00       3,42     111,59     390   1 distnoted
+      0     0,00       8,28     111,85     672   1 corespotlightd
+      0     0,00       8,05     117,63     419   1 mdbulkimport
+      0     0,00       8,38     128,73     440   1 trustd
+      0     0,00      22,80     140,15     579   1 Dock
+      0     0,00      17,70     175,67     562   1 sharingd
+      0     0,00      24,22     191,29     154 154 loginwindow
+      0     0,00      27,84     202,63     726   1 Yandex Helper
+      0     0,00      35,31     243,72     583   1 Finder
+      0     0,00      30,45     277,29     580   1 ControlCenter
+      0     0,00     198,97     309,73   85741   1 Google Chrome
+      0     0,00      47,22     403,52     725   1 Yandex Helper (
+      0     0,00      32,59     468,17     668   1 CursorUIViewSer
+      0     0,00      48,55     480,84   86098   1 Google Chrome H
+      0     0,00      22,53     676,38     548   1 WindowManager
+      0     0,00      71,58     682,90     669   1 Spotlight
+      0     0,00      58,62     693,05   85747   1 Google Chrome H
+      0     0,00     104,61     768,52     564   1 Yandex
+
+PS /Users/mac/untitled8/Mo01_Doronin>  Get-Process | Sort-Object CPU
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      0     0,00       0,00       0,00       0 …32
+      0     0,00       0,00       0,00   53746 …46
+      0     0,00       0,00       0,00   53789 …89
+      0     0,00       0,00       0,00   61732 …32
+      0     0,00       0,00       0,00   74040 …40
+      0     0,00       0,00       0,00   77145 …45
+      0     0,00       0,00       0,00   77167 …67
+      0     0,00       0,00       0,00   77546 …46
+      0     0,00       0,00       0,00   79125 …25
+      0     0,00       0,00       0,00   79127 …27
+      0     0,00       0,00       0,00   79141 …41
+      0     0,00       0,00       0,00   79154 …54
+      0     0,00       0,00       0,00   79185 …85
+      0     0,00       0,00       0,00   79300 …00
+      0     0,00       0,00       0,00   79423 …23
+      0     0,00       0,00       0,00   85979   1
+      0     0,00       0,00       0,00   89822 …22
+      0     0,00       0,00       0,00   90066 …66
+      0     0,00       0,00       0,00   52535   1
+      0     0,00       0,00       0,00   52415 …15
+      0     0,00       0,00       0,00   30924 …24
+      0     0,00       0,00       0,00   29520 …20
+      0     0,00       0,00       0,00     590 590
+      0     0,00       0,00       0,00     601 601
+      0     0,00       0,00       0,00     621 621
+      0     0,00       0,00       0,00     627 627
+      0     0,00       0,00       0,00     698 698
+      0     0,00       0,00       0,00     717 717
+      0     0,00       0,00       0,00     754   1
+      0     0,00       0,00       0,00     765   1
+      0     0,00       0,00       0,00   90077 …77
+      0     0,00       0,00       0,00     785 785
+      0     0,00       0,00       0,00    1096 …96
+      0     0,00       0,00       0,00    1098 …98
+      0     0,00       0,00       0,00    1107 …07
+      0     0,00       0,00       0,00    1128 …28
+      0     0,00       0,00       0,00    1147 …47
+      0     0,00       0,00       0,00    1304 …04
+      0     0,00       0,00       0,00    1313   1
+      0     0,00       0,00       0,00   29507   1
+      0     0,00       0,00       0,00     826   1
+      0     0,00       0,00       0,00   90078 …78
+      0     0,00       0,00       0,00   90083   1
+      0     0,00       0,00       0,00   90084   1
+      0     0,00       0,00       0,00   90231 …31
+      0     0,00       0,00       0,00   90255 …55
+      0     0,00       0,00       0,00   90257 …57
+      0     0,00       0,00       0,00   90273 …73
+      0     0,00       0,00       0,00   90275 …75
+      0     0,00       0,00       0,00   90277 …77
+      0     0,00       0,00       0,00   90282 …82
+      0     0,00       0,00       0,00   90289 …89
+      0     0,00       0,00       0,00   90229 …29
+      0     0,00       0,00       0,00   90291 …91
+      0     0,00       0,00       0,00   90324 …24
+      0     0,00       0,00       0,00   90331 …31
+      0     0,00       0,00       0,00   90332 …32
+      0     0,00       0,00       0,00   90362 …62
+      0     0,00       0,00       0,00   90367 …67
+      0     0,00       0,00       0,00   90429 …29
+      0     0,00       0,00       0,00   90430 …30
+      0     0,00       0,00       0,00   90431 …31
+      0     0,00       0,00       0,00   90306 …06
+      0     0,00       0,00       0,00     586 586
+      0     0,00       0,00       0,00   90228 …28
+      0     0,00       0,00       0,00   90220 …20
+      0     0,00       0,00       0,00   90085   1
+      0     0,00       0,00       0,00   90086   1
+      0     0,00       0,00       0,00   90087   1
+      0     0,00       0,00       0,00   90088   1
+      0     0,00       0,00       0,00   90089   1
+      0     0,00       0,00       0,00   90090   1
+      0     0,00       0,00       0,00   90091 …91
+      0     0,00       0,00       0,00   90092   1
+      0     0,00       0,00       0,00   90227 …27
+      0     0,00       0,00       0,00   90093   1
+      0     0,00       0,00       0,00   90102 …02
+      0     0,00       0,00       0,00   90119 …19
+      0     0,00       0,00       0,00   90123 …23
+      0     0,00       0,00       0,00   90124 …24
+      0     0,00       0,00       0,00   90125 …25
+      0     0,00       0,00       0,00   90127 …27
+      0     0,00       0,00       0,00   90130 …30
+      0     0,00       0,00       0,00   90201 …01
+      0     0,00       0,00       0,00   90094 …94
+      0     0,00       0,00       0,00     558 558
+      0     0,00       0,00       0,00   75473 …73
+      0     0,00       0,00       0,00     451   1
+      0     0,00       0,00       0,00     128 128
+      0     0,00       0,00       0,00     130 130
+      0     0,00       0,00       0,00     132 132
+      0     0,00       0,00       0,00     133 133
+      0     0,00       0,00       0,00     135 135
+      0     0,00       0,00       0,00     139 139
+      0     0,00       0,00       0,00     140 140
+      0     0,00       0,00       0,00     141 141
+      0     0,00       0,00       0,00     127 127
+      0     0,00       0,00       0,00     145 145
+      0     0,00       0,00       0,00     148 148
+      0     0,00       0,00       0,00     149 149
+      0     0,00       0,00       0,00     150 150
+      0     0,00       0,00       0,00     151 151
+      0     0,00       0,00       0,00     152 152
+      0     0,00       0,00       0,00     155 155
+      0     0,00       0,00       0,00     156 156
+      0     0,00       0,00       0,00     157 157
+      0     0,00       0,00       0,00     147 147
+      0     0,00       0,00       0,00     158 158
+      0     0,00       0,00       0,00     126 126
+      0     0,00       0,00       0,00     124 124
+      0     0,00       0,00       0,00       1   1
+      0     0,00       0,00       0,00      83  83
+      0     0,00       0,00       0,00      85  85
+      0     0,00       0,00       0,00      87  87
+      0     0,00       0,00       0,00      88  88
+      0     0,00       0,00       0,00      89  89
+      0     0,00       0,00       0,00      92  92
+      0     0,00       0,00       0,00      95  95
+      0     0,00       0,00       0,00     125 125
+      0     0,00       0,00       0,00      97  97
+      0     0,00       0,00       0,00     103 103
+      0     0,00       0,00       0,00     108 108
+      0     0,00       0,00       0,00     112 112
+      0     0,00       0,00       0,00     554   1
+      0     0,00       0,00       0,00     115 115
+      0     0,00       0,00       0,00     119 119
+      0     0,00       0,00       0,00     122 122
+      0     0,00       0,00       0,00     123 123
+      0     0,00       0,00       0,00      98  98
+      0     0,00       0,00       0,00     159 159
+      0     0,00       0,00       0,00     114 114
+      0     0,00       0,00       0,00     185 185
+      0     0,00       0,00       0,00     288   1
+      0     0,00       0,00       0,00     329 329
+      0     0,00       0,00       0,00     334 334
+      0     0,00       0,00       0,00     336 336
+      0     0,00       0,00       0,00     337 337
+      0     0,00       0,00       0,00     338 338
+      0     0,00       0,00       0,00     340 340
+      0     0,00       0,00       0,00     344 344
+      0     0,00       0,00       0,00     276 276
+      0     0,00       0,00       0,00     345   1
+      0     0,00       0,00       0,00     353   1
+      0     0,00       0,00       0,00     365 365
+      0     0,00       0,00       0,00     369   1
+      0     0,00       0,00       0,00     378 378
+      0     0,00       0,00       0,00     379  92
+      0     0,00       0,00       0,00     418   1
+      0     0,00       0,00       0,00     443 443
+      0     0,00       0,00       0,00     184 184
+      0     0,00       0,00       0,00     349 349
+      0     0,00       0,00       0,00     274 274
+      0     0,00       0,00       0,00     343   1
+      0     0,00       0,00       0,00     273 273
+      0     0,00       0,00       0,00     197 197
+      0     0,00       0,00       0,00     200 200
+      0     0,00       0,00       0,00     203   1
+      0     0,00       0,00       0,00     213 213
+      0     0,00       0,00       0,00     215   1
+      0     0,00       0,00       0,00     221   1
+      0     0,00       0,00       0,00     245 245
+      0     0,00       0,00       0,00     251 251
+      0     0,00       0,00       0,00     252 252
+      0     0,00       0,00       0,00     253 253
+      0     0,00       0,00       0,00     196 196
+      0     0,00       0,00       0,00     255 255
+      0     0,00       0,00       0,00     258 258
+      0     0,00       0,00       0,00     260 260
+      0     0,00       0,00       0,00     264 264
+      0     0,00       0,00       0,00     267   1
+      0     0,00       0,00       0,00     269 269
+      0     0,00       0,00       0,00     271 271
+      0     0,00       0,00       0,01   32176   0
+      0     0,00       4,41       0,01   90106 …06 CategoriesServi
+      0     0,00       1,94       0,01   90334   1 XProtect
+      0     0,00       2,77       0,01   90151 …51 com.apple.audio
+      0     0,00       2,03       0,02   90103 …03 PlugInLibrarySe
+      0     0,00       4,41       0,02   90108 …08 CategoriesServi
+      0     0,00       2,48       0,02   90071   1 csnameddatad
+      0     0,00       2,77       0,02   90145 …45 com.apple.audio
+      0     0,00      10,00       0,02   90142 …42 KonaSynthesizer
+      0     0,00       2,77       0,02   90144 …44 com.apple.audio
+      0     0,00       2,77       0,02   90146 …46 com.apple.audio
+      0     0,00       2,77       0,02   90143 …43 com.apple.audio
+      0     0,00       9,08       0,02   90131 …31 SpeechSynthesis
+      0     0,00       2,77       0,02   90147 …47 com.apple.audio
+      0     0,00       3,81       0,02   90104 …04 CSExattrCryptoS
+      0     0,00       8,80       0,03   90391 …91 extensionkitser
+      0     0,00       4,78       0,03   90072   1 ReportCrash
+      0     0,00       0,02       0,03   84263   1 ipcserver
+      0     0,00       9,58       0,03   90286   1 localizationswi
+      0     0,00       4,50       0,03   90471   1 trustevaluation
+      0     0,00       2,47       0,03   90136 …36 com.apple.audio
+      0     0,00       2,47       0,03   90268   1 com.apple.acces
+      0     0,00      10,64       0,03   90138 …38 SiriAUSP
+      0     0,00       7,05       0,03   90283   1 followupd
+      0     0,00       6,77       0,03   90141 …41 WardaSynthesize
+      0     0,00       5,69       0,03   90148 …48 com.apple.SiriT
+      0     0,00       5,69       0,03   90149 …49 com.apple.SiriT
+      0     0,00       2,23       0,04   85743 …42 chrome_crashpad
+      0     0,00       2,00       0,04   90236 …36 MDRemoteService
+      0     0,00       5,72       0,04   90178 …78 com.apple.SiriT
+      0     0,00       4,00       0,05   90368 …68 MTLCompilerServ
+      0     0,00       4,03       0,05   90365   1 metrickitd
+      0     0,00      10,62       0,05   90237 …37 extensionkitser
+      0     0,00      10,91       0,05   90140 …40 MauiAUSP
+      0     0,00       4,50       0,05   90116 …16 CategoriesServi
+      0     0,00      10,36       0,06   90139 …39 MacinTalkAUSP
+      0     0,00      10,52       0,06   90211 …11 XprotectService
+      0     0,00       7,17       0,06   90099   1 businessservice
+      0     0,00       5,95       0,06   90122   1 ctkd
+      0     0,00       4,58       0,06   90294   1 ManagedSettings
+      0     0,00      24,97       0,07   90475   1 AXVisualSupport
+      0     0,00       3,95       0,07   54639   1 mbuseragent
+      0     0,00       6,61       0,07   90096   1 maild
+      0     0,00       5,98       0,07   90129   1 AssetCacheLocat
+      0     0,00       5,47       0,08   90156 …56 CGPDFService
+      0     0,00      21,31       0,09   90397 …97 HeadphoneSettin
+      0     0,00      22,56       0,09   90393 …93 Appearance
+      0     0,00      10,77       0,09   90395   1 contactsdonatio
+      0     0,00      24,78       0,09   90396 …96 FamilySettings
+      0     0,00      21,28       0,09   90398 …98 FollowUpSetting
+      0     0,00      19,64       0,10   90372 …72 QuickLookUIServ
+      0     0,00      19,39       0,10   90356 …56 QuickLookUIServ
+      0     0,00      21,55       0,10   90399 …99 VPN
+      0     0,00      19,02       0,10   90468   1 mdworker_shared
+      0     0,00       0,45       0,10    1116   1 SimLaunchHost.a
+      0     0,00       1,09       0,10    6698   1 DiskUnmountWatc
+      0     0,00       3,64       0,10   90235   1 WiFiVelocityAge
+      0     0,00      19,28       0,10   90474   1 mdworker_shared
+      0     0,00      22,22       0,11   90400 …00 ClassroomSettin
+      0     0,00       1,52       0,11    1123   1 storedownloadd
+      0     0,00       0,97       0,11   61737 …32 zsh
+      0     0,00       9,05       0,11   90109 …09 CategoriesServi
+      0     0,00       9,02       0,11   90272   1 webprivacyd
+      0     0,00       9,11       0,11   90114   1 mobiletimerd
+      0     0,00       8,98       0,11   90271   1 com.apple.Safar
+      0     0,00       8,45       0,11   90126   1 SetStoreUpdateS
+      0     0,00       0,41       0,13    6772   1 USBAgent
+      0     0,00       8,25       0,13   90134   1 AudioComponentR
+      0     0,00       1,72       0,13   90225 …25 MTLCompilerServ
+      0     0,00       1,39       0,13    5890   1 mdwrite
+      0     0,00      11,56       0,14   90118   1 iCloudNotificat
+      0     0,00       9,94       0,14   90053   1 intelligentrout
+      0     0,00       8,77       0,15   90150   1 voicebankingd
+      0     0,00       1,36       0,15    1146   1 seserviced
+      0     0,00      12,34       0,16   90314   1 adprivacyd
+      0     0,00       8,95       0,16   79118 …18 CalendarWidgetE
+      0     0,00      12,56       0,16   90292   1 UsageTrackingAg
+      0     0,00      11,55       0,17   89813   1 Yandex Helper (
+      0     0,00      25,95       0,18   90326   1 Google Chrome H
+      0     0,00      46,53       0,19   90161   1 Google Chrome H
+      0     0,00       0,88       0,19    6960   1 IMAutomaticHist
+      0     0,00       0,70       0,20   90137 …37 WardaSynthesize
+      0     0,00       7,14       0,21   90113   1 linkd
+      0     0,00      40,33       0,21   89794   1 Google Chrome H
+      0     0,00      10,23       0,22   90076   1 syncdefaultsd
+      0     0,00       1,28       0,22     747   1 ctkahp
+      0     0,00       9,58       0,22   90120   1 akd
+      0     0,00      12,12       0,23   89561   1 Google Chrome H
+      0     0,00      29,95       0,24   90392 …92 AppleIDSettings
+      0     0,00      10,66       0,25   90308   1 transparencyd
+      0     0,00      20,58       0,25   90101 …01 QuickLookUIServ
+      0     0,00      33,34       0,26   89565   1 Google Chrome H
+      0     0,00      28,80       0,26   89566   1 Google Chrome H
+      0     0,00      14,92       0,26   90253   1 amsengagementd
+      0     0,00      27,78       0,27   89567   1 Google Chrome H
+      0     0,00       7,30       0,27   79390   1 PasswordBreachA
+      0     0,00      28,25       0,27   89568   1 Google Chrome H
+      0     0,00      11,56       0,28   89852   1 printtool
+      0     0,00      11,58       0,28   90290   1 ScreenTimeAgent
+      0     0,00       6,89       0,28   90105   1 ContextService
+      0     0,00       5,67       0,30   79103   1 pbs
+      0     0,00      15,17       0,30   87665 …65 ThemeWidgetCont
+      0     0,00      13,66       0,32   90252   1 amsaccountsd
+      0     0,00      17,45       0,33   90111   1 siriactionsd
+      0     0,00      13,44       0,34   90112   1 networkservicep
+      0     0,00       6,81       0,35   79090   1 ScopedBookmarkA
+      0     0,00      13,14       0,35   90075   1 CommCenter
+      0     0,00       1,61       0,36     623 622 chrome_crashpad
+      0     0,00      18,56       0,36   90276   1 donotdisturbd
+      0     0,00       9,50       0,37   79108   1 Keychain Circle
+      0     0,00      14,03       0,38   89994   1 AccessibilityVi
+      0     0,00       8,42       0,39   79452   1 SimulatorTrampo
+      0     0,00      10,80       0,39   90107 …07 CategoriesServi
+      0     0,00      17,16       0,39   90293   1 calaccessd
+      0     0,00       2,67       0,41     719   1 commerce
+      0     0,00       9,17       0,42   90110 …10 CategoriesServi
+      0     0,00       8,95       0,42   90081   1 mapssyncd
+      0     0,00       9,62       0,42   79132   1 neagent
+      0     0,00       6,62       0,43   78066   1 rcd
+      0     0,00      12,19       0,43   87776   1 fileproviderd
+      0     0,00      11,02       0,44   86526   1 IOUIAgent
+      0     0,00      11,98       0,44   90095   1 swcd
+      0     0,00      42,33       0,45   89795   1 Google Chrome H
+      0     0,00      13,69       0,47   86181   1 Google Chrome H
+      0     0,00      13,80       0,48   86173   1 Google Chrome H
+      0     0,00      13,58       0,48   86177   1 Google Chrome H
+      0     0,00      13,64       0,48   86162   1 Google Chrome H
+      0     0,00       9,11       0,49   79701   1 BackgroundTaskM
+      0     0,00      13,88       0,50   86183   1 Google Chrome H
+      0     0,00       0,00       0,50     588   1 fontworker
+      0     0,00      13,22       0,51   86174   1 Google Chrome H
+      0     0,00      13,61       0,51   86159   1 Google Chrome H
+      0     0,00      14,11       0,51   86165   1 Google Chrome H
+      0     0,00      13,59       0,52   86144   1 Google Chrome H
+      0     0,00      13,89       0,53   86153   1 Google Chrome H
+      0     0,00      13,48       0,54   86148   1 Google Chrome H
+      0     0,00      13,75       0,54   86158   1 Google Chrome H
+      0     0,00      14,03       0,56   86161   1 Google Chrome H
+      0     0,00      13,91       0,56   86178   1 Google Chrome H
+      0     0,00      13,56       0,56   86133   1 Google Chrome H
+      0     0,00      17,11       0,57   90295   1 knowledge-agent
+      0     0,00      14,12       0,57   86146   1 Google Chrome H
+      0     0,00      13,98       0,57   86145   1 Google Chrome H
+      0     0,00      14,42       0,58   90251   1 storekitagent
+      0     0,00      14,31       0,59   86168   1 Google Chrome H
+      0     0,00      13,86       0,59   86135   1 Google Chrome H
+      0     0,00      12,09       0,60   84788   1 AppSSOAgent
+      0     0,00      13,70       0,60   86128   1 Google Chrome H
+      0     0,00       9,16       0,60   79111   1 CoreLocationAge
+      0     0,00      13,95       0,60   86151   1 Google Chrome H
+      0     0,00      32,81       0,61   90355 …55 com.apple.appki
+      0     0,00      12,31       0,62   84251 …51 DockHelper
+      0     0,00      14,09       0,63   86136   1 Google Chrome H
+      0     0,00      34,17       0,63   90394 …94 NotificationsSe
+      0     0,00       0,67       0,63    4925 …25 VTDecoderXPCSer
+      0     0,00       9,55       0,64   90279   1 contactsd
+      0     0,00      11,62       0,65   90280 …80 IntelligencePla
+      0     0,00       9,03       0,66   79451   1 com.apple.CoreS
+      0     0,00      13,45       0,67   86975   1 nbagent
+      0     0,00      25,42       0,67   86142   1 Google Chrome H
+      0     0,00      35,27       0,69   90371 …71 com.apple.appki
+      0     0,00       4,39       0,69   90335   1 XProtectPluginS
+      0     0,00      16,09       0,71   89782 …82 ThumbnailExtens
+      0     0,00      25,16       0,71   86180   1 Google Chrome H
+      0     0,00      10,16       0,74   89882   1 triald
+      0     0,00      27,41       0,75   86166   1 Google Chrome H
+      0     0,00      25,44       0,75   86127   1 Google Chrome H
+      0     0,00      25,06       0,79   86160   1 Google Chrome H
+      0     0,00      48,25       0,80   86826   1 Google Chrome H
+      0     0,00       2,38       0,81     738   1 icdd
+      0     0,00      25,16       0,81   86118   1 Google Chrome H
+      0     0,00      25,77       0,83   86130   1 Google Chrome H
+      0     0,00      24,61       0,83   86132   1 Google Chrome H
+      0     0,00      25,09       0,84   86125   1 Google Chrome H
+      0     0,00      13,86       0,85   90296   1 remindd
+      0     0,00       1,30       0,88     609 609 WallpaperImageE
+      0     0,00      25,33       0,89   86126   1 Google Chrome H
+      0     0,00      27,97       0,93   86120   1 Google Chrome H
+      0     0,00      11,83       0,94   79728   1 studentd
+      0     0,00      10,95       0,95   80283   1 Yandex Helper (
+      0     0,00      25,92       0,95   86131   1 Google Chrome H
+      0     0,00      14,19       0,96   79122 …22 WorldClockWidge
+      0     0,00     109,06       1,05   90411   1 Google Chrome H
+      0     0,00      30,03       1,09   86803   1 Google Chrome H
+      0     0,00      48,50       1,10   89793   1 Google Chrome H
+      0     0,00      16,23       1,11   87726   1 callservicesd
+      0     0,00      16,50       1,14   80282   1 Yandex Helper (
+      0     0,00      27,77       1,16   86122   1 Google Chrome H
+      0     0,00      21,23       1,17   87715   1 Google Chrome H
+      0     0,00      27,73       1,19   87735   1 naturallanguage
+      0     0,00      10,00       1,19   80281   1 OSDUIHelper
+      0     0,00      37,39       1,22   90390   1 System Settings
+      0     0,00      13,06       1,23   84837   1 SoftwareUpdateN
+      0     0,00       9,00       1,23   79157   1 contentlinkingd
+      0     0,00       8,58       1,25   87728   1 dmd
+      0     0,00      13,95       1,25   79226   1 CoreServicesUIA
+      0     0,00      28,41       1,26   86124   1 Google Chrome H
+      0     0,00      41,66       1,27   86123   1 Google Chrome H
+      0     0,00       6,88       1,33   77097   1 coreauthd
+      0     0,00       3,92       1,36   90152 …52 MTLCompilerServ
+      0     0,00       1,33       1,36   30926 …26 diskimages-help
+      0     0,00       6,80       1,40   77152   1 secinitd
+      0     0,00      13,89       1,40   90082   1 com.apple.geod
+      0     0,00       3,97       1,44     589   1 imklaunchagent
+      0     0,00       0,19       1,50   90135 …35 CarbonComponent
+      0     0,00      46,03       1,59   86119   1 Google Chrome H
+      0     0,00       3,50       1,61     571   1 StatusKitAgent
+      0     0,00      30,77       1,65   86117   1 Google Chrome H
+      0     0,00      32,22       1,75   86121   1 Google Chrome H
+      0     0,00       4,14       1,75   77193   1 com.apple.hiser
+      0     0,00      45,55       1,80   90162   1 Google Chrome H
+      0     0,00      11,47       1,84   90115   1 siriknowledged
+      0     0,00      32,33       1,97   87324   1 Yandex Helper (
+      0     0,00      15,58       1,99   85834   1 Google Chrome H
+      0     0,00      20,61       2,02   79114 …14 ScreenTimeWidge
+      0     0,00      13,09       2,03   86487   1 Google Chrome H
+      0     0,00      15,45       2,11   85679   1 Yandex Helper (
+      0     0,00      27,12       2,27   87253   1 Yandex Helper (
+      0     0,00      14,73       2,37   79106   1 pkd
+      0     0,00      16,81       2,39   85749   1 Google Chrome H
+      0     0,00      26,81       2,43   87066   1 Yandex Helper (
+      0     0,00      11,69       2,49   90133   1 axassetsd
+      0     0,00       8,02       2,54   76982   1 bluetoothuserd
+      0     0,00       8,56       2,57   77399   1 assistantd
+      0     0,00       9,75       3,07   77143   1 audioaccessoryd
+      0     0,00       3,45       3,07     569   1 familycircled
+      0     0,00       2,94       3,12     741   1 AirPlayUIAgent
+      0     0,00      33,34       3,14   85929   1 Google Chrome H
+      0     0,00      15,80       3,28   79361   1 TextInputSwitch
+      0     0,00       3,48       3,29    1165   1 storeuid
+      0     0,00       8,30       3,32   85713   1 Obsidian Helper
+      0     0,00       4,14       3,67     574   1 ContinuityCaptu
+      0     0,00      12,53       3,68   85833   1 Google Chrome H
+      0     0,00      10,08       3,76   90064   1 replayd
+      0     0,00      16,41       3,78   77631 …31 QuickLookSatell
+      0     0,00      13,77       3,82   49085   1 Yandex Helper (
+      0     0,00      10,33       3,94   77401   1 homed
+      0     0,00       1,23       3,95     707   1 mediaremoteagen
+      0     0,00      12,56       3,96   77523   1 iconservicesage
+      0     0,00       3,97       4,01     582   1 SystemUIServer
+      0     0,00      48,64       4,15   79119 …19 StocksWidget
+      0     0,00      28,45       4,25   90100 …00 com.apple.appki
+      0     0,00       5,64       4,28     545   1 usernotificatio
+      0     0,00      12,52       4,30   77191   1 proactived
+      0     0,00      22,50       4,83   84283   1 Yandex Helper (
+      0     0,00       4,28       4,99     596   1 bird
+      0     0,00       4,91       5,20     718   1 passd
+      0     0,00       5,83       5,25     652   1 imagent
+      0     0,00       7,53       5,48    3840   1 UserNotificatio
+      0     0,00      22,66       5,48   79110   1 chronod
+      0     0,00       6,23       5,71     755   1 Yandex Helper (
+      0     0,00      38,33       5,81   87329   1 Yandex Helper (
+      0     0,00       6,17       6,19    6771   1 MobileDeviceUpd
+      0     0,00     130,86       6,32   90426 …32 pwsh
+      0     0,00       3,97       6,29   60079   1 containermanage
+      0     0,00      93,09       6,41   90349   1 Google Chrome H
+      0     0,00     140,39       6,42   79249   1 AppleSpell
+      0     0,00      24,00       6,54   87254   1 Yandex Helper (
+      0     0,00      67,61       6,54   90098   1 Google Chrome H
+      0     0,00      29,30       6,59   84838 …38 nsattributedstr
+      0     0,00       8,95       6,85   54459   1 tipsd
+      0     0,00       6,69       6,99     534   1 pboard
+      0     0,00       5,64       7,16    1828   1 PowerChime
+      0     0,00      18,59       7,19   87326   1 Yandex Helper (
+      0     0,00      18,88       7,46   87283   1 Yandex Helper (
+      0     0,00       9,23       7,55   76896   1 tccd
+      0     0,00      46,25       8,21   86491   1 Google Chrome H
+      0     0,00      14,45       8,70   77053   1 parsecd
+      0     0,00      14,20       8,76   85712   1 Obsidian Helper
+      0     0,00       5,86       9,05     733   1 corespeechd
+      0     0,00       7,09       9,45     749   1 HitVPN
+      0     0,00       6,27       9,70     570   1 sharedfilelistd
+      0     0,00       9,17      10,03     540   1 usernoted
+      0     0,00       7,47      11,13     743   1 diagnostics_age
+      0     0,00       6,34      11,16     665   1 useractivityd
+      0     0,00      16,14      11,34   79357   1 routined
+      0     0,00       9,16      12,84   20581   1 UIKitSystem
+      0     0,00       8,62      13,06    1120   1 AMPLibraryAgent
+      0     0,00       6,27      13,20     587   1 WallpaperAgent
+      0     0,00       4,47      13,54     532   1 universalaccess
+      0     0,00       7,34      13,67     414   1 secd
+      0     0,00       6,67      13,77   49508 …08 VTDecoderXPCSer
+      0     0,00       9,55      14,89     552   1 accountsd
+      0     0,00      80,75      14,94   61731   1 Terminal
+      0     0,00       3,88      14,98     927   1 Yandex Helper
+      0     0,00      23,09      15,20   85711   1 Obsidian
+      0     0,00      27,62      16,28   79120 …20 WeatherWidget
+      0     0,00     108,55      16,71   90361   1 Microsoft Power
+      0     0,00      19,58      16,83   86717   1 Google Chrome H
+      0     0,00      31,97      17,10   89804   1 Notes
+      0     0,00       8,16      17,91     553   1 identityservice
+      0     0,00       3,89      18,46   26546   1 Yandex Helper
+      0     0,00       6,17      19,03     728   1 Yandex Helper
+      0     0,00     141,06      19,07   90176   1 Google Chrome H
+      0     0,00       2,45      19,67     581   1 fontd
+      0     0,00       6,61      21,69     657 657 PAH_Extension
+      0     0,00      13,08      22,08   77615   1 com.apple.quick
+      0     0,00      60,41      22,12   89542   1 Google Chrome H
+      0     0,00      10,05      22,18     744   1 TextInputMenuAg
+      0     0,00       9,34      22,78   29625   1 cloudd
+      0     0,00      14,92      23,15   77307   1 suggestd
+      0     0,00       8,66      24,11     832   1 Yandex Helper (
+      0     0,00       9,16      24,80   52411   1 appstoreagent
+      0     0,00     103,47      25,37   90354   1 TextEdit
+      0     0,00      51,62      25,54   89912   1 Google Chrome H
+      0     0,00      19,39      26,46   76884   1 ContextStoreAge
+      0     0,00      40,03      27,84   89783   1 TipTop VPN
+      0     0,00      10,38      28,54     406   1 lsd
+      0     0,00       6,89      29,09     831   1 Yandex Helper
+      0     0,00       7,53      30,74     542   1 rapportd
+      0     0,00       6,70      31,85     525   1 UserEventAgent
+      0     0,00     114,61      34,33   86750   1 Google Chrome H
+      0     0,00      15,31      37,30   64042   1 remotepairingd
+      0     0,00      10,70      38,59     538   1 nsurlsessiond
+      0     0,00       5,88      39,03     603   1 AMPDeviceDiscov
+      0     0,00      70,34      39,60   85901   1 Google Chrome H
+      0     0,00      12,31      40,97   77183   1 BiomeAgent
+      0     0,00       6,86      42,21     597   1 ViewBridgeAuxil
+      0     0,00      21,53      45,24     756   1 Yandex Helper (
+      0     0,00       4,97      46,60   49504 …04 WallpaperVideoE
+      0     0,00      25,41      50,22     567   1 NotificationCen
+      0     0,00      10,03      50,45     667 667 com.apple.dock.
+      0     0,00       2,64      53,41     708   1 avconferenced
+      0     0,00      42,50      61,94   86774   1 Google Chrome H
+      0     0,00       9,75      72,89     556   1 WiFiAgent
+      0     0,00      64,73      73,09   89796   1 Google Chrome H
+      0     0,00      68,89      73,90   85748   1 Google Chrome H
+      0     0,00      14,33      84,36   86492   1 Google Chrome H
+      0     0,00       3,69      92,55     404   1 cfprefsd
+      0     0,00       3,42     111,60     390   1 distnoted
+      0     0,00       8,28     111,85     672   1 corespotlightd
+      0     0,00       8,05     117,63     419   1 mdbulkimport
+      0     0,00       8,62     128,74     440   1 trustd
+      0     0,00      22,80     140,16     579   1 Dock
+      0     0,00      17,70     175,67     562   1 sharingd
+      0     0,00      24,22     191,29     154 154 loginwindow
+      0     0,00      28,02     202,64     726   1 Yandex Helper
+      0     0,00      35,38     243,73     583   1 Finder
+      0     0,00      30,45     277,30     580   1 ControlCenter
+      0     0,00     201,83     309,75   85741   1 Google Chrome
+      0     0,00      47,22     403,53     725   1 Yandex Helper (
+      0     0,00      32,78     468,34     668   1 CursorUIViewSer
+      0     0,00      48,83     480,84   86098   1 Google Chrome H
+      0     0,00      23,00     676,44     548   1 WindowManager
+      0     0,00      58,52     682,90     669   1 Spotlight
+      0     0,00      58,64     693,05   85747   1 Google Chrome H
+      0     0,00     105,89     768,55     564   1 Yandex
+
+PS /Users/mac/untitled8/Mo01_Doronin> Get-Process | Sort-Object CPU -Descending
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      0     0,00     105,95     768,57     564   1 Yandex
+      0     0,00      58,64     693,05   85747   1 Google Chrome H
+      0     0,00      52,70     682,90     669   1 Spotlight
+      0     0,00      23,20     676,50     548   1 WindowManager
+      0     0,00      48,83     480,84   86098   1 Google Chrome H
+      0     0,00      32,88     468,47     668   1 CursorUIViewSer
+      0     0,00      47,22     403,53     725   1 Yandex Helper (
+      0     0,00     202,42     309,76   85741   1 Google Chrome
+      0     0,00      30,45     277,30     580   1 ControlCenter
+      0     0,00      35,50     243,74     583   1 Finder
+      0     0,00      28,02     202,65     726   1 Yandex Helper
+      0     0,00      24,22     191,29     154 154 loginwindow
+      0     0,00      17,70     175,68     562   1 sharingd
+      0     0,00      22,86     140,16     579   1 Dock
+      0     0,00       8,66     128,74     440   1 trustd
+      0     0,00       8,05     117,63     419   1 mdbulkimport
+      0     0,00       8,28     111,85     672   1 corespotlightd
+      0     0,00       3,42     111,61     390   1 distnoted
+      0     0,00       3,77      92,55     404   1 cfprefsd
+      0     0,00      14,33      84,36   86492   1 Google Chrome H
+      0     0,00      68,91      73,91   85748   1 Google Chrome H
+      0     0,00      64,73      73,09   89796   1 Google Chrome H
+      0     0,00       9,75      72,89     556   1 WiFiAgent
+      0     0,00      42,52      61,94   86774   1 Google Chrome H
+      0     0,00       2,64      53,41     708   1 avconferenced
+      0     0,00      10,03      50,45     667 667 com.apple.dock.
+      0     0,00      25,41      50,22     567   1 NotificationCen
+      0     0,00       4,97      46,60   49504 …04 WallpaperVideoE
+      0     0,00      21,53      45,24     756   1 Yandex Helper (
+      0     0,00       6,91      42,22     597   1 ViewBridgeAuxil
+      0     0,00      12,31      41,02   77183   1 BiomeAgent
+      0     0,00      70,42      39,61   85901   1 Google Chrome H
+      0     0,00       5,88      39,03     603   1 AMPDeviceDiscov
+      0     0,00      10,70      38,59     538   1 nsurlsessiond
+      0     0,00      15,36      37,30   64042   1 remotepairingd
+      0     0,00     114,61      34,33   86750   1 Google Chrome H
+      0     0,00       6,70      31,85     525   1 UserEventAgent
+      0     0,00       7,53      30,74     542   1 rapportd
+      0     0,00       6,89      29,09     831   1 Yandex Helper
+      0     0,00      10,47      28,54     406   1 lsd
+      0     0,00      40,03      27,84   89783   1 TipTop VPN
+      0     0,00     101,64      26,84   90354   1 TextEdit
+      0     0,00      19,77      26,52   76884   1 ContextStoreAge
+      0     0,00      51,62      25,54   89912   1 Google Chrome H
+      0     0,00       9,41      24,80   52411   1 appstoreagent
+      0     0,00       8,66      24,11     832   1 Yandex Helper (
+      0     0,00      14,92      23,15   77307   1 suggestd
+      0     0,00       9,34      22,78   29625   1 cloudd
+      0     0,00      10,05      22,18     744   1 TextInputMenuAg
+      0     0,00      60,41      22,12   89542   1 Google Chrome H
+      0     0,00      13,08      22,08   77615   1 com.apple.quick
+      0     0,00       6,62      21,69     657 657 PAH_Extension
+      0     0,00       2,45      19,67     581   1 fontd
+      0     0,00     141,06      19,07   90176   1 Google Chrome H
+      0     0,00       6,17      19,03     728   1 Yandex Helper
+      0     0,00       3,89      18,46   26546   1 Yandex Helper
+      0     0,00       8,16      17,91     553   1 identityservice
+      0     0,00      31,97      17,10   89804   1 Notes
+      0     0,00      19,58      16,83   86717   1 Google Chrome H
+      0     0,00     108,59      16,71   90361   1 Microsoft Power
+      0     0,00      27,62      16,28   79120 …20 WeatherWidget
+      0     0,00      23,09      15,20   85711   1 Obsidian
+      0     0,00      82,05      15,17   61731   1 Terminal
+      0     0,00       3,88      14,98     927   1 Yandex Helper
+      0     0,00       9,55      14,89     552   1 accountsd
+      0     0,00       6,67      13,77   49508 …08 VTDecoderXPCSer
+      0     0,00       7,34      13,67     414   1 secd
+      0     0,00       4,47      13,54     532   1 universalaccess
+      0     0,00       6,27      13,20     587   1 WallpaperAgent
+      0     0,00       8,62      13,06    1120   1 AMPLibraryAgent
+      0     0,00       9,16      12,84   20581   1 UIKitSystem
+      0     0,00      16,14      11,34   79357   1 routined
+      0     0,00       6,36      11,16     665   1 useractivityd
+      0     0,00       7,47      11,13     743   1 diagnostics_age
+      0     0,00       9,17      10,03     540   1 usernoted
+      0     0,00       6,27       9,70     570   1 sharedfilelistd
+      0     0,00       7,09       9,45     749   1 HitVPN
+      0     0,00       5,86       9,05     733   1 corespeechd
+      0     0,00      14,20       8,76   85712   1 Obsidian Helper
+      0     0,00      14,45       8,70   77053   1 parsecd
+      0     0,00      46,25       8,21   86491   1 Google Chrome H
+      0     0,00       9,23       7,55   76896   1 tccd
+      0     0,00      18,88       7,46   87283   1 Yandex Helper (
+      0     0,00      18,59       7,19   87326   1 Yandex Helper (
+      0     0,00       5,64       7,16    1828   1 PowerChime
+      0     0,00       6,75       7,00     534   1 pboard
+      0     0,00       8,95       6,85   54459   1 tipsd
+      0     0,00      29,30       6,59   84838 …38 nsattributedstr
+      0     0,00      65,72       6,54   90098   1 Google Chrome H
+      0     0,00      24,00       6,54   87254   1 Yandex Helper (
+      0     0,00     140,66       6,53   79249   1 AppleSpell
+      0     0,00      93,09       6,41   90349   1 Google Chrome H
+      0     0,00     131,09       6,37   90426 …32 pwsh
+      0     0,00       3,97       6,29   60079   1 containermanage
+      0     0,00       6,17       6,19    6771   1 MobileDeviceUpd
+      0     0,00      38,33       5,81   87329   1 Yandex Helper (
+      0     0,00       6,23       5,71     755   1 Yandex Helper (
+      0     0,00      22,66       5,48   79110   1 chronod
+      0     0,00       7,53       5,48    3840   1 UserNotificatio
+      0     0,00       5,83       5,25     652   1 imagent
+      0     0,00       4,91       5,20     718   1 passd
+      0     0,00       4,28       4,99     596   1 bird
+      0     0,00      22,50       4,83   84283   1 Yandex Helper (
+      0     0,00      12,48       4,30   77191   1 proactived
+      0     0,00       5,64       4,28     545   1 usernotificatio
+      0     0,00      28,44       4,25   90100 …00 com.apple.appki
+      0     0,00      48,64       4,15   79119 …19 StocksWidget
+      0     0,00       3,97       4,01     582   1 SystemUIServer
+      0     0,00      12,56       3,96   77523   1 iconservicesage
+      0     0,00       1,23       3,95     707   1 mediaremoteagen
+      0     0,00      10,33       3,94   77401   1 homed
+      0     0,00      13,77       3,82   49085   1 Yandex Helper (
+      0     0,00      16,41       3,78   77631 …31 QuickLookSatell
+      0     0,00      10,08       3,76   90064   1 replayd
+      0     0,00      12,53       3,68   85833   1 Google Chrome H
+      0     0,00       4,14       3,67     574   1 ContinuityCaptu
+      0     0,00       8,30       3,32   85713   1 Obsidian Helper
+      0     0,00       3,48       3,29    1165   1 storeuid
+      0     0,00      15,88       3,28   79361   1 TextInputSwitch
+      0     0,00      33,34       3,14   85929   1 Google Chrome H
+      0     0,00       2,94       3,12     741   1 AirPlayUIAgent
+      0     0,00       3,45       3,07     569   1 familycircled
+      0     0,00       9,75       3,07   77143   1 audioaccessoryd
+      0     0,00       8,56       2,57   77399   1 assistantd
+      0     0,00       8,02       2,54   76982   1 bluetoothuserd
+      0     0,00      11,69       2,49   90133   1 axassetsd
+      0     0,00      26,81       2,43   87066   1 Yandex Helper (
+      0     0,00      16,83       2,39   85749   1 Google Chrome H
+      0     0,00      14,73       2,37   79106   1 pkd
+      0     0,00      27,12       2,27   87253   1 Yandex Helper (
+      0     0,00      15,45       2,11   85679   1 Yandex Helper (
+      0     0,00      13,09       2,03   86487   1 Google Chrome H
+      0     0,00      20,61       2,02   79114 …14 ScreenTimeWidge
+      0     0,00      15,58       1,99   85834   1 Google Chrome H
+      0     0,00      32,33       1,97   87324   1 Yandex Helper (
+      0     0,00      11,47       1,84   90115   1 siriknowledged
+      0     0,00      45,55       1,80   90162   1 Google Chrome H
+      0     0,00       4,14       1,75   77193   1 com.apple.hiser
+      0     0,00      32,22       1,75   86121   1 Google Chrome H
+      0     0,00      30,77       1,65   86117   1 Google Chrome H
+      0     0,00       3,50       1,61     571   1 StatusKitAgent
+      0     0,00      46,03       1,59   86119   1 Google Chrome H
+      0     0,00       0,19       1,50   90135 …35 CarbonComponent
+      0     0,00       3,97       1,44     589   1 imklaunchagent
+      0     0,00      13,89       1,40   90082   1 com.apple.geod
+      0     0,00       6,80       1,40   77152   1 secinitd
+      0     0,00       1,33       1,36   30926 …26 diskimages-help
+      0     0,00       3,92       1,36   90152 …52 MTLCompilerServ
+      0     0,00       6,88       1,33   77097   1 coreauthd
+      0     0,00      41,66       1,27   86123   1 Google Chrome H
+      0     0,00      28,41       1,26   86124   1 Google Chrome H
+      0     0,00      13,95       1,25   79226   1 CoreServicesUIA
+      0     0,00       8,58       1,25   87728   1 dmd
+      0     0,00       9,00       1,23   79157   1 contentlinkingd
+      0     0,00      13,06       1,23   84837   1 SoftwareUpdateN
+      0     0,00      27,84       1,23   87735   1 naturallanguage
+      0     0,00      37,39       1,22   90390   1 System Settings
+      0     0,00      10,00       1,19   80281   1 OSDUIHelper
+      0     0,00      21,23       1,17   87715   1 Google Chrome H
+      0     0,00      27,77       1,16   86122   1 Google Chrome H
+      0     0,00      16,50       1,14   80282   1 Yandex Helper (
+      0     0,00      16,23       1,11   87726   1 callservicesd
+      0     0,00      48,50       1,10   89793   1 Google Chrome H
+      0     0,00      30,03       1,09   86803   1 Google Chrome H
+      0     0,00     109,06       1,05   90411   1 Google Chrome H
+      0     0,00      14,19       0,96   79122 …22 WorldClockWidge
+      0     0,00      25,92       0,95   86131   1 Google Chrome H
+      0     0,00      10,95       0,95   80283   1 Yandex Helper (
+      0     0,00      11,83       0,95   79728   1 studentd
+      0     0,00      27,97       0,93   86120   1 Google Chrome H
+      0     0,00      25,33       0,89   86126   1 Google Chrome H
+      0     0,00       1,30       0,88     609 609 WallpaperImageE
+      0     0,00      13,86       0,85   90296   1 remindd
+      0     0,00      25,09       0,84   86125   1 Google Chrome H
+      0     0,00      24,61       0,83   86132   1 Google Chrome H
+      0     0,00      25,77       0,83   86130   1 Google Chrome H
+      0     0,00      25,16       0,81   86118   1 Google Chrome H
+      0     0,00       2,38       0,81     738   1 icdd
+      0     0,00      48,25       0,80   86826   1 Google Chrome H
+      0     0,00      25,06       0,79   86160   1 Google Chrome H
+      0     0,00      25,44       0,75   86127   1 Google Chrome H
+      0     0,00      27,41       0,75   86166   1 Google Chrome H
+      0     0,00      10,16       0,74   89882   1 triald
+      0     0,00      25,16       0,71   86180   1 Google Chrome H
+      0     0,00      16,09       0,71   89782 …82 ThumbnailExtens
+      0     0,00       4,39       0,69   90335   1 XProtectPluginS
+      0     0,00      35,28       0,69   90371 …71 com.apple.appki
+      0     0,00      25,42       0,67   86142   1 Google Chrome H
+      0     0,00      13,52       0,67   86975   1 nbagent
+      0     0,00       9,03       0,66   79451   1 com.apple.CoreS
+      0     0,00      11,62       0,65   90280 …80 IntelligencePla
+      0     0,00       9,55       0,64   90279   1 contactsd
+      0     0,00       0,67       0,63    4925 …25 VTDecoderXPCSer
+      0     0,00      34,25       0,63   90394 …94 NotificationsSe
+      0     0,00      14,09       0,63   86136   1 Google Chrome H
+      0     0,00      12,31       0,62   84251 …51 DockHelper
+      0     0,00      32,86       0,61   90355 …55 com.apple.appki
+      0     0,00      13,95       0,60   86151   1 Google Chrome H
+      0     0,00       9,16       0,60   79111   1 CoreLocationAge
+      0     0,00      13,70       0,60   86128   1 Google Chrome H
+      0     0,00      12,09       0,60   84788   1 AppSSOAgent
+      0     0,00      13,86       0,59   86135   1 Google Chrome H
+      0     0,00      14,31       0,59   86168   1 Google Chrome H
+      0     0,00      14,42       0,58   90251   1 storekitagent
+      0     0,00      13,98       0,57   86145   1 Google Chrome H
+      0     0,00      14,12       0,57   86146   1 Google Chrome H
+      0     0,00      17,11       0,57   90295   1 knowledge-agent
+      0     0,00      13,56       0,56   86133   1 Google Chrome H
+      0     0,00      13,91       0,56   86178   1 Google Chrome H
+      0     0,00      14,03       0,56   86161   1 Google Chrome H
+      0     0,00      13,75       0,54   86158   1 Google Chrome H
+      0     0,00      13,48       0,54   86148   1 Google Chrome H
+      0     0,00      13,89       0,53   86153   1 Google Chrome H
+      0     0,00      13,59       0,52   86144   1 Google Chrome H
+      0     0,00      14,11       0,51   86165   1 Google Chrome H
+      0     0,00      13,61       0,51   86159   1 Google Chrome H
+      0     0,00      13,22       0,51   86174   1 Google Chrome H
+      0     0,00       0,00       0,50     588   1 fontworker
+      0     0,00      13,88       0,50   86183   1 Google Chrome H
+      0     0,00       9,11       0,49   79701   1 BackgroundTaskM
+      0     0,00      13,64       0,48   86162   1 Google Chrome H
+      0     0,00      13,58       0,48   86177   1 Google Chrome H
+      0     0,00      13,80       0,48   86173   1 Google Chrome H
+      0     0,00      13,69       0,47   86181   1 Google Chrome H
+      0     0,00      42,33       0,45   89795   1 Google Chrome H
+      0     0,00      11,98       0,44   90095   1 swcd
+      0     0,00      11,02       0,44   86526   1 IOUIAgent
+      0     0,00      12,19       0,43   87776   1 fileproviderd
+      0     0,00       6,62       0,43   78066   1 rcd
+      0     0,00       9,62       0,42   79132   1 neagent
+      0     0,00       8,95       0,42   90081   1 mapssyncd
+      0     0,00       9,17       0,42   90110 …10 CategoriesServi
+      0     0,00       2,67       0,41     719   1 commerce
+      0     0,00      17,16       0,39   90293   1 calaccessd
+      0     0,00      10,80       0,39   90107 …07 CategoriesServi
+      0     0,00       8,42       0,39   79452   1 SimulatorTrampo
+      0     0,00      14,03       0,38   89994   1 AccessibilityVi
+      0     0,00       9,50       0,37   79108   1 Keychain Circle
+      0     0,00      18,56       0,36   90276   1 donotdisturbd
+      0     0,00       1,61       0,36     623 622 chrome_crashpad
+      0     0,00      13,16       0,35   90075   1 CommCenter
+      0     0,00       6,81       0,35   79090   1 ScopedBookmarkA
+      0     0,00      13,44       0,34   90112   1 networkservicep
+      0     0,00      17,44       0,33   90111   1 siriactionsd
+      0     0,00      13,70       0,32   90252   1 amsaccountsd
+      0     0,00      15,22       0,31   87665 …65 ThemeWidgetCont
+      0     0,00       5,67       0,30   79103   1 pbs
+      0     0,00       6,89       0,28   90105   1 ContextService
+      0     0,00      11,58       0,28   90290   1 ScreenTimeAgent
+      0     0,00      11,56       0,28   89852   1 printtool
+      0     0,00      28,25       0,27   89568   1 Google Chrome H
+      0     0,00       7,30       0,27   79390   1 PasswordBreachA
+      0     0,00      27,78       0,27   89567   1 Google Chrome H
+      0     0,00      14,97       0,26   90253   1 amsengagementd
+      0     0,00      28,80       0,26   89566   1 Google Chrome H
+      0     0,00      33,34       0,26   89565   1 Google Chrome H
+      0     0,00      20,64       0,25   90101 …01 QuickLookUIServ
+      0     0,00      10,66       0,25   90308   1 transparencyd
+      0     0,00      29,97       0,24   90392 …92 AppleIDSettings
+      0     0,00      12,12       0,23   89561   1 Google Chrome H
+      0     0,00       9,58       0,22   90120   1 akd
+      0     0,00       1,28       0,22     747   1 ctkahp
+      0     0,00      10,23       0,22   90076   1 syncdefaultsd
+      0     0,00      40,33       0,21   89794   1 Google Chrome H
+      0     0,00       7,14       0,21   90113   1 linkd
+      0     0,00       0,70       0,20   90137 …37 WardaSynthesize
+      0     0,00       0,88       0,19    6960   1 IMAutomaticHist
+      0     0,00      46,64       0,19   90161   1 Google Chrome H
+      0     0,00      25,95       0,18   90326   1 Google Chrome H
+      0     0,00      11,55       0,17   89813   1 Yandex Helper (
+      0     0,00      12,56       0,16   90292   1 UsageTrackingAg
+      0     0,00       8,95       0,16   79118 …18 CalendarWidgetE
+      0     0,00      12,34       0,16   90314   1 adprivacyd
+      0     0,00       1,36       0,15    1146   1 seserviced
+      0     0,00       8,77       0,15   90150   1 voicebankingd
+      0     0,00       9,94       0,14   90053   1 intelligentrout
+      0     0,00      11,56       0,14   90118   1 iCloudNotificat
+      0     0,00       1,39       0,13    5890   1 mdwrite
+      0     0,00       1,72       0,13   90225 …25 MTLCompilerServ
+      0     0,00       8,25       0,13   90134   1 AudioComponentR
+      0     0,00       0,41       0,13    6772   1 USBAgent
+      0     0,00       8,45       0,11   90126   1 SetStoreUpdateS
+      0     0,00       8,98       0,11   90271   1 com.apple.Safar
+      0     0,00       9,11       0,11   90114   1 mobiletimerd
+      0     0,00       9,03       0,11   90272   1 webprivacyd
+      0     0,00       9,05       0,11   90109 …09 CategoriesServi
+      0     0,00       0,97       0,11   61737 …32 zsh
+      0     0,00      22,22       0,11   90400 …00 ClassroomSettin
+      0     0,00       1,52       0,11    1123   1 storedownloadd
+      0     0,00      19,28       0,10   90474   1 mdworker_shared
+      0     0,00       3,64       0,10   90235   1 WiFiVelocityAge
+      0     0,00       1,09       0,10    6698   1 DiskUnmountWatc
+      0     0,00      21,58       0,10   90399 …99 VPN
+      0     0,00       0,45       0,10    1116   1 SimLaunchHost.a
+      0     0,00      19,39       0,10   90356 …56 QuickLookUIServ
+      0     0,00      19,66       0,10   90372 …72 QuickLookUIServ
+      0     0,00      21,28       0,09   90398 …98 FollowUpSetting
+      0     0,00      24,80       0,09   90396 …96 FamilySettings
+      0     0,00      22,56       0,09   90393 …93 Appearance
+      0     0,00      10,77       0,09   90395   1 contactsdonatio
+      0     0,00      21,31       0,09   90397 …97 HeadphoneSettin
+      0     0,00       5,47       0,08   90156 …56 CGPDFService
+      0     0,00       5,98       0,07   90129   1 AssetCacheLocat
+      0     0,00       6,61       0,07   90096   1 maild
+      0     0,00       3,95       0,07   54639   1 mbuseragent
+      0     0,00      25,03       0,07   90475   1 AXVisualSupport
+      0     0,00       4,58       0,06   90294   1 ManagedSettings
+      0     0,00       5,95       0,06   90122   1 ctkd
+      0     0,00       7,17       0,06   90099   1 businessservice
+      0     0,00      10,52       0,06   90211 …11 XprotectService
+      0     0,00      10,36       0,06   90139 …39 MacinTalkAUSP
+      0     0,00       4,50       0,05   90116 …16 CategoriesServi
+      0     0,00      10,91       0,05   90140 …40 MauiAUSP
+      0     0,00      10,62       0,05   90237 …37 extensionkitser
+      0     0,00       4,03       0,05   90365   1 metrickitd
+      0     0,00       4,00       0,05   90368 …68 MTLCompilerServ
+      0     0,00       5,72       0,04   90178 …78 com.apple.SiriT
+      0     0,00       2,00       0,04   90236 …36 MDRemoteService
+      0     0,00       2,23       0,04   85743 …42 chrome_crashpad
+      0     0,00       5,69       0,03   90149 …49 com.apple.SiriT
+      0     0,00       5,69       0,03   90148 …48 com.apple.SiriT
+      0     0,00       6,77       0,03   90141 …41 WardaSynthesize
+      0     0,00       7,05       0,03   90283   1 followupd
+      0     0,00      10,64       0,03   90138 …38 SiriAUSP
+      0     0,00       2,47       0,03   90268   1 com.apple.acces
+      0     0,00       2,47       0,03   90136 …36 com.apple.audio
+      0     0,00       9,58       0,03   90286   1 localizationswi
+      0     0,00       0,02       0,03   84263   1 ipcserver
+      0     0,00       4,78       0,03   90072   1 ReportCrash
+      0     0,00       8,80       0,03   90391 …91 extensionkitser
+      0     0,00       3,81       0,02   90104 …04 CSExattrCryptoS
+      0     0,00       2,77       0,02   90147 …47 com.apple.audio
+      0     0,00       9,08       0,02   90131 …31 SpeechSynthesis
+      0     0,00       2,77       0,02   90143 …43 com.apple.audio
+      0     0,00       2,77       0,02   90146 …46 com.apple.audio
+      0     0,00       2,77       0,02   90144 …44 com.apple.audio
+      0     0,00      10,00       0,02   90142 …42 KonaSynthesizer
+      0     0,00       2,77       0,02   90145 …45 com.apple.audio
+      0     0,00       2,48       0,02   90071   1 csnameddatad
+      0     0,00       4,41       0,02   90108 …08 CategoriesServi
+      0     0,00       2,03       0,02   90103 …03 PlugInLibrarySe
+      0     0,00       2,77       0,01   90151 …51 com.apple.audio
+      0     0,00       1,94       0,01   90334   1 XProtect
+      0     0,00       4,41       0,01   90106 …06 CategoriesServi
+      0     0,00       0,00       0,01   32176   0
+      0     0,00       0,00       0,00     251 251
+      0     0,00       0,00       0,00     245 245
+      0     0,00       0,00       0,00     344 344
+      0     0,00       0,00       0,00     221   1
+      0     0,00       0,00       0,00     338 338
+      0     0,00       0,00       0,00     213 213
+      0     0,00       0,00       0,00     203   1
+      0     0,00       0,00       0,00     369   1
+      0     0,00       0,00       0,00     345   1
+      0     0,00       0,00       0,00     200 200
+      0     0,00       0,00       0,00     349 349
+      0     0,00       0,00       0,00     215   1
+      0     0,00       0,00       0,00     252 252
+      0     0,00       0,00       0,00     258 258
+      0     0,00       0,00       0,00     255 255
+      0     0,00       0,00       0,00     197 197
+      0     0,00       0,00       0,00     337 337
+      0     0,00       0,00       0,00     336 336
+      0     0,00       0,00       0,00     334 334
+      0     0,00       0,00       0,00     329 329
+      0     0,00       0,00       0,00     288   1
+      0     0,00       0,00       0,00     343   1
+      0     0,00       0,00       0,00     276 276
+      0     0,00       0,00       0,00     274 274
+      0     0,00       0,00       0,00     273 273
+      0     0,00       0,00       0,00     271 271
+      0     0,00       0,00       0,00     269 269
+      0     0,00       0,00       0,00     365 365
+      0     0,00       0,00       0,00     267   1
+      0     0,00       0,00       0,00     264 264
+      0     0,00       0,00       0,00     260 260
+      0     0,00       0,00       0,00     340 340
+      0     0,00       0,00       0,00     253 253
+      0     0,00       0,00       0,00     353   1
+      0     0,00       0,00       0,00     150 150
+      0     0,00       0,00       0,00     185 185
+      0     0,00       0,00       0,00     124 124
+      0     0,00       0,00       0,00     123 123
+      0     0,00       0,00       0,00     122 122
+      0     0,00       0,00       0,00     119 119
+      0     0,00       0,00       0,00     115 115
+      0     0,00       0,00       0,00     114 114
+      0     0,00       0,00       0,00     112 112
+      0     0,00       0,00       0,00     108 108
+      0     0,00       0,00       0,00     103 103
+      0     0,00       0,00       0,00      98  98
+      0     0,00       0,00       0,00      97  97
+      0     0,00       0,00       0,00      95  95
+      0     0,00       0,00       0,00      92  92
+      0     0,00       0,00       0,00      89  89
+      0     0,00       0,00       0,00      88  88
+      0     0,00       0,00       0,00      87  87
+      0     0,00       0,00       0,00      85  85
+      0     0,00       0,00       0,00      83  83
+      0     0,00       0,00       0,00       1   1
+      0     0,00       0,00       0,00     125 125
+      0     0,00       0,00       0,00     126 126
+      0     0,00       0,00       0,00     127 127
+      0     0,00       0,00       0,00     128 128
+      0     0,00       0,00       0,00     184 184
+      0     0,00       0,00       0,00     159 159
+      0     0,00       0,00       0,00     158 158
+      0     0,00       0,00       0,00     157 157
+      0     0,00       0,00       0,00     156 156
+      0     0,00       0,00       0,00     155 155
+      0     0,00       0,00       0,00     152 152
+      0     0,00       0,00       0,00     151 151
+      0     0,00       0,00       0,00     378 378
+      0     0,00       0,00       0,00     196 196
+      0     0,00       0,00       0,00     149 149
+      0     0,00       0,00       0,00     147 147
+      0     0,00       0,00       0,00     145 145
+      0     0,00       0,00       0,00     141 141
+      0     0,00       0,00       0,00     140 140
+      0     0,00       0,00       0,00     139 139
+      0     0,00       0,00       0,00     135 135
+      0     0,00       0,00       0,00     133 133
+      0     0,00       0,00       0,00     132 132
+      0     0,00       0,00       0,00     130 130
+      0     0,00       0,00       0,00     148 148
+      0     0,00       0,00       0,00     379  92
+      0     0,00       0,00       0,00    1107 …07
+      0     0,00       0,00       0,00     443 443
+      0     0,00       0,00       0,00   90130 …30
+      0     0,00       0,00       0,00   90127 …27
+      0     0,00       0,00       0,00   90125 …25
+      0     0,00       0,00       0,00   90124 …24
+      0     0,00       0,00       0,00   90123 …23
+      0     0,00       0,00       0,00   90119 …19
+      0     0,00       0,00       0,00   90102 …02
+      0     0,00       0,00       0,00   90094 …94
+      0     0,00       0,00       0,00   90201 …01
+      0     0,00       0,00       0,00   90093   1
+      0     0,00       0,00       0,00   90091 …91
+      0     0,00       0,00       0,00   90090   1
+      0     0,00       0,00       0,00   90089   1
+      0     0,00       0,00       0,00   90088   1
+      0     0,00       0,00       0,00   90087   1
+      0     0,00       0,00       0,00   90086   1
+      0     0,00       0,00       0,00   90085   1
+      0     0,00       0,00       0,00   90084   1
+      0     0,00       0,00       0,00   90092   1
+      0     0,00       0,00       0,00   90220 …20
+      0     0,00       0,00       0,00   90227 …27
+      0     0,00       0,00       0,00   90228 …28
+      0     0,00       0,00       0,00   90431 …31
+      0     0,00       0,00       0,00   90430 …30
+      0     0,00       0,00       0,00   90429 …29
+      0     0,00       0,00       0,00   90367 …67
+      0     0,00       0,00       0,00   90362 …62
+      0     0,00       0,00       0,00   90332 …32
+      0     0,00       0,00       0,00   90331 …31
+      0     0,00       0,00       0,00   90324 …24
+      0     0,00       0,00       0,00   90306 …06
+      0     0,00       0,00       0,00   90291 …91
+      0     0,00       0,00       0,00   90289 …89
+      0     0,00       0,00       0,00   90282 …82
+      0     0,00       0,00       0,00   90277 …77
+      0     0,00       0,00       0,00   90275 …75
+      0     0,00       0,00       0,00   90273 …73
+      0     0,00       0,00       0,00   90257 …57
+      0     0,00       0,00       0,00   90255 …55
+      0     0,00       0,00       0,00   90231 …31
+      0     0,00       0,00       0,00   90229 …29
+      0     0,00       0,00       0,00   90083   1
+      0     0,00       0,00       0,00   90078 …78
+      0     0,00       0,00       0,00   90077 …77
+      0     0,00       0,00       0,00   90066 …66
+      0     0,00       0,00       0,00    1304 …04
+      0     0,00       0,00       0,00    1147 …47
+      0     0,00       0,00       0,00    1128 …28
+      0     0,00       0,00       0,00    1098 …98
+      0     0,00       0,00       0,00    1096 …96
+      0     0,00       0,00       0,00     826   1
+      0     0,00       0,00       0,00     785 785
+      0     0,00       0,00       0,00     765   1
+      0     0,00       0,00       0,00     754   1
+      0     0,00       0,00       0,00     717 717
+      0     0,00       0,00       0,00     698 698
+      0     0,00       0,00       0,00     627 627
+      0     0,00       0,00       0,00     621 621
+      0     0,00       0,00       0,00     601 601
+      0     0,00       0,00       0,00     590 590
+      0     0,00       0,00       0,00     586 586
+      0     0,00       0,00       0,00     558 558
+      0     0,00       0,00       0,00     554   1
+      0     0,00       0,00       0,00     451   1
+      0     0,00       0,00       0,00    1313   1
+      0     0,00       0,00       0,00     418   1
+      0     0,00       0,00       0,00   29507   1
+      0     0,00       0,00       0,00   30924 …24
+      0     0,00       0,00       0,00   89822 …22
+      0     0,00       0,00       0,00   85979   1
+      0     0,00       0,00       0,00   79423 …23
+      0     0,00       0,00       0,00   79300 …00
+      0     0,00       0,00       0,00   79185 …85
+      0     0,00       0,00       0,00   79154 …54
+      0     0,00       0,00       0,00   79141 …41
+      0     0,00       0,00       0,00   79127 …27
+      0     0,00       0,00       0,00   79125 …25
+      0     0,00       0,00       0,00   77546 …46
+      0     0,00       0,00       0,00   77167 …67
+      0     0,00       0,00       0,00   77145 …45
+      0     0,00       0,00       0,00   75473 …73
+      0     0,00       0,00       0,00   74040 …40
+      0     0,00       0,00       0,00   61732 …32
+      0     0,00       0,00       0,00   53789 …89
+      0     0,00       0,00       0,00   53746 …46
+      0     0,00       0,00       0,00   52535   1
+      0     0,00       0,00       0,00   52415 …15
+      0     0,00       0,00       0,00   29520 …20
+      0     0,00       0,00       0,00       0 …32
+
+PS /Users/mac/untitled8/Mo01_Doronin> Get-Process | Sort-Object CPU -Descending | Select-Object Id, ProcessName, Company | Group-Object Company
+
+Count Name                      Group
+----- ----                      -----
+  517                           {@{Id=564; ProcessName=Yandex; Company=}, @{Id…
+
+PS /Users/mac/untitled8/Mo01_Doronin> Get-Process | Sort-Object CPU -Descending | Select-Object Id, ProcessName, Company | Group-Object Company | Where-Object { $_.Count -gt 1 }
+
+Count Name                      Group
+----- ----                      -----
+  518                           {@{Id=564; ProcessName=Yandex; Company=}, @{Id…
+
+PS /Users/mac/untitled8/Mo01_Doronin> Get-Process | Sort-Object CPU -Descending | Select-Object Id, ProcessName, Company | Group-Object Company | Where-Object { $_.Count -gt 1 -and $_.Name -ne "" }
+PS /Users/mac/untitled8/Mo01_Doronin> Stop-Tra
+Stop-Tra: The term 'Stop-Tra' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Stop-Tra: The term 'Stop-Tra' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS /Users/mac/untitled8/Mo01_Doronin> Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20241119220424
+**********************
